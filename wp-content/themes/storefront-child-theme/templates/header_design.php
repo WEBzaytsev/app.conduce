@@ -329,7 +329,7 @@ if( !$primaryNav ){
                 </div>
                 <div class="nav_menu_right menu_button_mobile">
 <!--                     <span class="dashicons dashicons-ellipsis"></span> -->
-                    <svg style="display:block;vertical-align:middle" viewBox="0 0 512 512" height="50" width="50" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"></path></svg>
+                    <svg style="display:block;vertical-align:middle" class="main_menu_nav-btn" viewBox="0 0 512 512" height="50" width="50" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"></path></svg>
                     <div class="main_menu_nav">
                         <?php foreach ($primaryNav as $menu_item ) { ?>
                             <a class="tool_nav_link" href="<?php echo $menu_item->url; ?>"> <?php echo $menu_item->title; ?></a>
@@ -360,16 +360,20 @@ if( !$primaryNav ){
 </div>
 <script>
 	(function($){
-		$("#masthead  .menu_button_mobile").click(function(){
+	    const isMobile = window.outerWidth <= 768;
+
+	    if (isMobile) {
+            $("#masthead  .menu_button_mobile").click(function(){
                 if( $("#masthead  .menu_button_mobile").hasClass("active") ){
-			    	$(".custom_my_account_main_div .outer_wrapper_myaccount .content_left_myaccount_main").animate({ left: '-800px' }, 500);
-			    	$(this).removeClass("active")
-			    }
-			    else{
-			    	$(this).addClass("active")
-			    	$(".custom_my_account_main_div .outer_wrapper_myaccount .content_left_myaccount_main").animate({ left: '0px' }, 500);
-			    }      
-    	})
+                    $(".custom_my_account_main_div .outer_wrapper_myaccount .content_left_myaccount_main").animate({ left: '-800px' }, 500);
+                    $(this).removeClass("active")
+                }
+                else{
+                    $(this).addClass("active")
+                    $(".custom_my_account_main_div .outer_wrapper_myaccount .content_left_myaccount_main").animate({ left: '0px' }, 500);
+                }
+            })
+        }
 
         $(document).on("click",".mobile_icon_pc_view",function(){
             if( $(this).hasClass("active") ){
@@ -390,10 +394,11 @@ if( !$primaryNav ){
 			    }      
     	})
 
-	$(".main_header .nav_menu_right svg").click(function(){
-        $(this).next().slideToggle("fast")
-        $(this).next().css("display","flex")
-    })
+        $(".main_header .nav_menu_right svg").click(function(){
+            $(this).next().slideToggle("fast")
+            $(this).next().addClass("show")
+            $(this).next().css("display","flex")
+        })
 	})(jQuery)
 </script>
 
