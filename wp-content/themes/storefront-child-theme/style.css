@@ -1,0 +1,296 @@
+/*
+Theme Name:   	Storefront Child Theme
+Theme URI:    	https://erosteps.com
+Description:    Storefront Child Theme
+Author:       	Ankita
+Author URI:     https://erosteps.com
+Template:     	storefront
+Version:      	0.8.4
+*/
+
+*, html, a, button, input, textbox, p, h1, h2, h3, h4, h5, h6, ul, li, span, div{
+	font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+input[type='submit']{
+	outline:none !important;
+}
+input[type='text']{
+	border-top:none;
+}
+
+.page-id-12 #masthead{
+	display:none !important;
+}
+.page-id-12 .site-footer{
+    display:none !important;
+}
+#post-12 .entry-header{
+	display:none !important;
+}
+.page-id-12 .content-area{
+	margin-bottom:0 !important;
+}
+.page-id-12 .hentry{
+	margin-bottom:0px !important;
+}
+#post-12 .edit-link{
+	display:none !important;
+}
+.page-id-12 .site-main{
+	margin-bottom:0px !important;
+}
+
+.page-id-17 #masthead{
+	display:none !important;
+}
+/* .page-id-17 .site-footer{
+    display:none !important;
+} */
+#post-17 .entry-header{
+	display:none !important;
+}
+.page-id-17 .content-area{
+	margin-bottom:0 !important;
+}
+.page-id-17 .hentry{
+	margin-bottom:0px !important;
+}
+#post-17 .edit-link{
+	display:none !important;
+}
+.page-id-17 .site-main{
+	margin-bottom:0px !important;
+}
+.page-id-17 .storefront-breadcrumb{
+	display:none !important;
+}
+
+.page-id-20 #masthead{
+	display:none !important;
+}
+/* .page-id-20 .site-footer{
+    display:none !important;
+} */
+#post-20 .entry-header{
+	display:none !important;
+}
+.page-id-20 .content-area{
+	margin-bottom:0 !important;
+}
+.page-id-20 .hentry{
+	margin-bottom:0px !important;
+}
+#post-20 .edit-link{
+	display:none !important;
+}
+.page-id-20 .site-main{
+	margin-bottom:0px !important;
+}
+.storefront-breadcrumb{
+	display:none !important;
+}
+div.nsl-container[data-align="left"] {
+	text-align: center !important;
+}
+div.nsl-container.nsl-container-block .nsl-container-buttons{
+	display:block !important;
+	/* grid-template-columns: minmax(370px, 35px) !important; */
+}
+
+element.style {
+    background-color: #fff;
+    display: flex;
+    flex-direction: row-reverse;
+}
+div.nsl-container .nsl-button-google[data-skin="light"]{
+	border-radius: 5px !important;
+	color: #1467f7d6 !important;
+	border: 1px solid lightgrey;
+	background: whitesmoke !important;
+	display: flex;
+    flex-direction: row-reverse;
+	box-shadow:none !important;
+	height: 40px !important;
+}
+div.nsl-container .nsl-button-google[data-skin="light"]:hover{
+	border-color:#8ed1fc !important;
+}
+div.nsl-container .nsl-button-default div.nsl-button-label-container{
+	line-height: 15px !important;
+}
+ .site-footer .site-info{
+	display: none !important;
+}
+.site-footer{
+	padding:15px 15px 8px 20px!important;
+	z-index:1111;
+}
+/*
+.site-footer .widget_block{
+	margin:0px !important;
+}*/
+.site-footer .col-full{
+	max-width:100% !important;
+	padding:0px;
+	
+}
+/*
+.site-footer .wp-block-columns{
+	margin-bottom:0px !important;
+}*/
+.site-footer .footer-widgets{
+	padding-top:0px;
+	border-bottom:0px;
+}
+.site-footer .widget{
+	margin:0px;
+}
+.site-footer .wp-block-columns{
+	margin:0px;
+}
+/*.footer-widgets .wp-container-3{
+	display: flex;
+	column-gap:0px;
+	row-gap:0px;
+}*/
+.footer-widgets p{
+	margin:0px;
+} 
+@media screen and (max-width:786px){
+	/* .site-footer .footer-widgets{ */
+/* 		margin-bottom:6em; */
+	/* } */
+	.site-footer .footer-widgets .wp-container-5 p{
+		text-align:left;
+	}
+}
+.site-content .hentry{
+	margin:0px;
+}
+
+.content-area{
+	margin-bottom:0px;
+}
+.site-main{
+	margin-bottom:0px;
+}
+
+@media (max-width: 66.4989378333em){
+	.site-footer .col-full{
+		margin-left:0px;
+		margin-right:0px;
+	}
+}
+@media screen and (max-width:768px) {
+  #colophon #block-7 .wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column {
+flex-basis: unset !important;
+}
+.storefront-handheld-footer-bar {
+display: none;
+}
+#colophon #block-7 .wp-container-3 {
+gap: 2em;
+/* 	width:120px */
+}
+.site-footer .footer-widgets .wp-container-5 p {
+text-align: right;
+}
+/*  #colophon #block-7 .wp-container-4 .wp-block-column {
+    flex-grow: 0.2;
+} */
+
+	.site-footer{
+		padding: 10px 10px 10px 10px !important;
+	}
+	.site-footer .col-full{
+	max-width:100% !important;
+	padding:0px 0em !important;
+	
+}
+	
+}
+#colophon #block-7 .wp-container-3 {
+gap: 0;
+	width:120px;
+}
+#colophon #block-7 .wp-container-1 a{
+	color:#75757A;
+	text-decoration:none;
+	outline: none;
+	font-size:12px;
+
+}
+#colophon #block-7 .wp-container-1 a:hover{
+	text-decoration:underline;
+}
+
+#colophon #block-7 .wp-container-1 p{
+	color:#75757A;
+	text-decoration:none;
+	font-size:12px;
+}
+
+#colophon #block-7 .wp-container-2 a{
+	color:#75757A;
+	text-decoration:none;
+	outline: none;
+	font-size:12px;
+
+}
+
+#colophon #block-7 .wp-container-2 a:hover{
+	text-decoration:underline;
+}
+
+#colophon #block-7 .wp-container-2 p{
+	color:#75757A;
+	text-decoration:none;
+	font-size:12px;
+}
+#colophon #block-7 .wp-container-5 p{
+	font-size:12px;
+}
+.site-footer{
+	position:fixed;
+	bottom:0;
+	width:100%;
+	background: #fff;
+    padding: 1em 0px 1em;
+    border-top: 1px solid #D8D8D8;
+}
+#colophon #block-7 .wp-container-5 #site_up_arrow{
+    background-color: #F8F6F4;
+    cursor: pointer;
+    outline: none !important;
+    position: absolute;
+    top: -60px;
+    right: 20px;
+    height: 40px;
+    width: 40px;
+    background-image: url(assets/images/arrow-up.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+div.nsl-container .nsl-button-default div.nsl-button-label-container{
+	margin: 0 auto 0 auto !important;
+	font-size: 14px !important;
+}
+
+.breadcrumps{
+    position: absolute;
+    right: 0;
+    font-size: 12px;
+    font-weight: 400;
+    color: #646464;
+    text-transform: uppercase;
+}
+@media screen and (max-width:786px){
+    .breadcrumps{
+        display:none;
+    }
+    #colophon #block-7 .wp-container-5 #site_up_arrow{
+        top: -50px;
+        right: 10px;
+    }
+}
