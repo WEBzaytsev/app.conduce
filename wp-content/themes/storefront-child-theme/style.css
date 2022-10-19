@@ -342,3 +342,11 @@ div.nsl-container .nsl-button-default div.nsl-button-label-container{
 		bottom: 46px;
 	}
 }
+
+#dashboard_home_inner_wrapper_ID .p_description {
+	line-height: 120% !important;
+}
+
+#dashboard_home_inner_wrapper_ID .dashboard_home_four_sec {
+	height: calc(100% - 20px);
+}
