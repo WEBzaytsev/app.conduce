@@ -413,7 +413,7 @@ if( !$primaryNav ){
                     $(this).parent(".content_left_myaccount_main").addClass("slid_left_pc_menu");
                     $(".custom_my_account_main_div .outer_wrapper_myaccount .content_right_myaccount_main").addClass("full_screen_for_pc")
                     $(this).addClass('hamburg_icon_show_slide')
-			    }      
+			    }
     	})
 
         $(".main_header .nav_menu_right svg").click(function(){
