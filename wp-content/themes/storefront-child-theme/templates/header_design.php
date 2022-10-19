@@ -375,6 +375,28 @@ if( !$primaryNav ){
             })
         }
 
+	    $(document).on('click', function (e) {
+	        const target = $(e.target);
+	        const dropdown = $('.main_menu_nav');
+
+	        if (!dropdown.length || !dropdown.hasClass('show')) {
+	            return;
+            }
+
+	        if (
+	            target.hasClass('main_menu_nav') ||
+                target.parent().hasClass('main_menu_nav') ||
+                target.hasClass('main_menu_nav-btn') ||
+                target.parent().hasClass('main_menu_nav-btn')
+            ) {
+	            return;
+            }
+
+            dropdown.slideToggle("fast");
+            $(this).next().removeClass("show");
+            dropdown.css("display","none");
+        })
+
         $(document).on("click",".mobile_icon_pc_view",function(){
             if( $(this).hasClass("active") ){
 			    	$(this).removeClass("active")
