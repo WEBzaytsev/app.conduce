@@ -350,3 +350,20 @@ div.nsl-container .nsl-button-default div.nsl-button-label-container{
 #dashboard_home_inner_wrapper_ID .dashboard_home_four_sec {
 	height: calc(100% - 20px);
 }
+
+#dashboard_home_inner_wrapper_ID .dashboard_home_four_sec {
+	margin-bottom: 0!important;
+}
+
+body .custom_my_account_main_div .outer_wrapper_myaccount .content_left_myaccount_main ul {
+	cursor: default;
+}
+
+.custom_my_account_main_div .outer_wrapper_myaccount .content_left_myaccount_main ul > li {
+	cursor: pointer;
+}
+
+.dashboard_home_four_sec_div {
+	display: grid;
+	row-gap: 20px
+}
