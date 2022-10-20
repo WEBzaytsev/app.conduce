@@ -39,6 +39,7 @@ wp-content/themes/*
 
 !wp-content/plugins/
 wp-content/plugins/*
+!wp-content/plugins/custom-user-dashboard/
 
 !wp-content/themes/storefront/
 !wp-content/themes/storefront/package-lock.json
