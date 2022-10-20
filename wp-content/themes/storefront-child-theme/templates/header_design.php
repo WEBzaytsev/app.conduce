@@ -393,7 +393,7 @@ if( !$primaryNav ){
             }
 
             dropdown.slideToggle("fast");
-            $(this).next().removeClass("show");
+            dropdown.removeClass("show");
             dropdown.css("display","none");
         })
 
@@ -416,10 +416,12 @@ if( !$primaryNav ){
 			    }
     	})
 
-        $(".main_header .nav_menu_right svg").click(function(){
-            $(this).next().slideToggle("fast")
-            $(this).next().addClass("show")
-            $(this).next().css("display","flex")
+        $(".main_header .nav_menu_right").click(function(){
+            const svg = $(this).find('svg');
+            const dropdown = svg.next();
+            dropdown.slideToggle("fast")
+            dropdown.addClass("show")
+            dropdown.css("display","flex")
         })
 	})(jQuery)
 </script>
