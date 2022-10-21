@@ -11,3 +11,4 @@
 | 8 slide | 1:30 hour | Removed the pointer in places where there's no link. Also changed target element for dropdown menu i. e. it is relevant by design logic and better for users accessibility |
 | 9 slide | 1:40 hour | Checked all links. Change only "Guide", but note that "https://docs.conduce.io" don't exist now. Other links as I can see work properly now. |
 | fix sidebar | 4:10 min | Particular remake sidebar. Fixed some markup issues. Fixed some JS issues. Added single components for same elements |
+| 10 slide | 1 hour | Particular remake sidebar. Fixed some markup issues. Fixed some JS issues. Added single components for same elements. Added tooltips for all sidebar items |

@@ -394,11 +394,11 @@ if (!$primaryNav) {
                 <a class="<?php if ($_GET['tab'] == "analysis") echo 'active_menu_item' ?> "
                    href="<?php echo get_account_pageUrl('analysis') ?>">Analysis</a>
             </li>
-            <div class="my_account_link_last">
-                <li class="my_account_link con_active_menu">
-                    <a class="active_menu_item" href="<?php ?>">Shop</a>
-                </li>
-            </div>
+            <li class="my_account_link_last <?php if ($_GET['tab'] == "shop") echo 'active_menu_item' ?> ">
+                <span class="my_account_link con_active_menu">
+                    <a class="active_menu_item" href="<?php echo get_account_pageUrl('shop') ?>">Shop</a>
+                </span>
+            </li>
         </ul>
     </div>
 </div>
