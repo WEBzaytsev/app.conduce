@@ -2,49 +2,64 @@
     <?php require_once(UD_PLUGIN_PATH . "templates/shortcodes/header.php"); ?>
     <div class="outer_wrapper_myaccount">
         <div class="content_left_myaccount_main">
-<!--            <span class="arrow-icon-menu mobile_icon_pc_view">-->
-<!--                <span class="tooltip_custom tool_tip">Toggle sidebar</span>-->
-<!--            </span>-->
+            <!--            <span class="arrow-icon-menu mobile_icon_pc_view">-->
+            <!--                <span class="tooltip_custom tool_tip">Toggle sidebar</span>-->
+            <!--            </span>-->
             <div class="dashboard_wrapper">
                 <div class="menu_navigation_mobile"></div>
-<!--                <h5 class="content_left_heading_myaccount dashboard_head">Dashboard</h5>-->
+                <!--                <h5 class="content_left_heading_myaccount dashboard_head">Dashboard</h5>-->
                 <?php get_template_part(
-                        '/templates/common/toggle-sidebar-button',
-                        null,
-                        array(
-                                'text' => 'Dashboard'
-                        )
+                    '/templates/common/toggle-sidebar-button',
+                    null,
+                    array(
+                        'text' => 'Dashboard'
+                    )
                 ); ?>
                 <ul class="left_content_link">
                     <li data-current="home"
                         class="my_account_content_link tooltip_trigger home-icon <?php if (($_GET['tab'] == 'dashboard' || $_GET['tab'] == '') && $_GET['current'] == '') echo 'active_li_menu active_li_menu' ?>">
-                        <a href="<?php echo get_account_subpageUrl('dashboard', '') ?>">Home<span
-                                    class="tooltip_custom tool_tip tooltip_side">Dashboard home</span></a>
+                        <a href="<?php echo get_account_subpageUrl('dashboard', '') ?>">
+                            Home
+                            <span class="tooltip_custom tool_tip tooltip_side">Dashboard home</span>
+                        </a>
                     </li>
                     <li class="my_account_content_link my-account-icon tooltip_trigger <?php if ($_GET['current'] == 'my_account') echo 'active_li_menu' ?>"
                         data-current="my_account">
-                        <a href="<?php echo get_account_subpageUrl('dashboard', 'my_account') ?>">My account<span
-                                    class="tooltip_custom tool_tip tooltip_side">Manage your account</span></a>
+                        <a href="<?php echo get_account_subpageUrl('dashboard', 'my_account') ?>">
+                            My account
+                            <span class="tooltip_custom tool_tip tooltip_side">Manage your account</span>
+                        </a>
                     </li>
                     <li class="my_account_content_link settings-icon tooltip_trigger <?php if ($_GET['current'] == 'Settings') echo 'active_li_menu' ?>"
                         data-current="settings">
-                        <a href="<?php echo get_account_subpageUrl('dashboard', 'Settings') ?>">Settings<span
-                                    class="tooltip_custom tool_tip tooltip_side">Organise the dashboard settings</span></a>
+                        <a href="<?php echo get_account_subpageUrl('dashboard', 'Settings') ?>">
+                            Settings
+                            <span class="tooltip_custom tool_tip tooltip_side">Organise the dashboard settings</span>
+                        </a>
                     </li>
                 </ul>
                 <h5 class="content_left_heading_myaccount">Tools</h5>
                 <ul class="left_content_link">
                     <li data-current="home"
-                        class="my_account_content_link meta-icon <?php if ($_GET['current'] == 'metadata') echo 'active_li_menu' ?>">
-                        <a href="<?php echo get_account_pageUrl('metadata') ?>">Metadata</a>
+                        class="my_account_content_link meta-icon tooltip_trigger <?php if ($_GET['current'] == 'metadata') echo 'active_li_menu' ?>">
+                        <a href="<?php echo get_account_pageUrl('metadata') ?>">
+                            Metadata
+                            <span class="tooltip_custom tool_tip tooltip_side">Metadata</span>
+                        </a>
                     </li>
-                    <li class="my_account_content_link analysis-icon <?php if ($_GET['current'] == 'analysis') echo 'active_li_menu' ?>"
+                    <li class="my_account_content_link analysis-icon tooltip_trigger <?php if ($_GET['current'] == 'analysis') echo 'active_li_menu' ?>"
                         data-current="my_account">
-                        <a href="<?php echo get_account_pageUrl('analysis') ?>">Analysis</a>
+                        <a href="<?php echo get_account_pageUrl('analysis') ?>">
+                            Analysis
+                            <span class="tooltip_custom tool_tip tooltip_side">Analysis</span>
+                        </a>
                     </li>
-                    <li class="my_account_content_link shop-icon <?php if ($_GET['current'] == 'pay') echo 'active_li_menu' ?>"
+                    <li class="my_account_content_link shop-icon tooltip_trigger <?php if ($_GET['current'] == 'pay') echo 'active_li_menu' ?>"
                         data-current="settings">
-                        <a href="<?php echo get_account_pageUrl('shop') ?>">Shop</a>
+                        <a href="<?php echo get_account_pageUrl('shop') ?>">
+                            Shop
+                            <span class="tooltip_custom tool_tip tooltip_side">Shop</span>
+                        </a>
                     </li>
                 </ul>
             </div>
