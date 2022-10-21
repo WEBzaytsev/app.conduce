@@ -55,7 +55,7 @@
         font-size: 30px;
         line-height: 1;
 		margin-bottom:20px;
-        font-weight: 500;
+        font-weight: 600;
         color: #040404;
         position:relative;      
     }
