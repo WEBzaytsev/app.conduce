@@ -69,7 +69,7 @@
     #dashboard_home_inner_wrapper_ID .dashboard_home_heading{
         font-size: 30px;
         margin-bottom: 20px;
-        font-weight: 500;
+        font-weight: 600;
         color: #040404;
         line-height: 1;
         position: relative;
