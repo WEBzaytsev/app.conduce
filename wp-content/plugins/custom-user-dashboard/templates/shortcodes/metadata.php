@@ -13,16 +13,25 @@
                 ); ?>
                 <ul class="left_content_link">
                     <li data-current="control"
-                        class="my_account_content_link control-icon <?php if (($_GET['tab'] == 'metadata' || $_GET['tab'] == '') && $_GET['current'] == '') echo 'active_li_menu active_li_menu' ?>">
-                        <a href="<?php echo get_account_pageUrl('metadata') ?>">Control</a>
+                        class="my_account_content_link control-icon tooltip_trigger <?php if (($_GET['tab'] == 'metadata' || $_GET['tab'] == '') && $_GET['current'] == '') echo 'active_li_menu active_li_menu' ?>">
+                        <a href="<?php echo get_account_pageUrl('metadata') ?>">
+                            Control
+                            <span class="tooltip_custom tool_tip tooltip_side">Control</span>
+                        </a>
                     </li>
-                    <li class="my_account_content_link run-icon <?php if ($_GET['current'] == 'run') echo 'active_li_menu' ?>"
+                    <li class="my_account_content_link run-icon tooltip_trigger <?php if ($_GET['current'] == 'run') echo 'active_li_menu' ?>"
                         data-current="run">
-                        <a href="<?php echo get_account_subpageUrl('metadata', 'run') ?>">Run</a>
+                        <a href="<?php echo get_account_subpageUrl('metadata', 'run') ?>">
+                            Run
+                            <span class="tooltip_custom tool_tip tooltip_side">Run</span>
+                        </a>
                     </li>
-                    <li class="my_account_content_link files-icon <?php if ($_GET['current'] == 'files') echo 'active_li_menu' ?>"
+                    <li class="my_account_content_link files-icon tooltip_trigger <?php if ($_GET['current'] == 'files') echo 'active_li_menu' ?>"
                         data-current="files">
-                        <a href="<?php echo get_account_subpageUrl('metadata', 'files') ?>">Files</a>
+                        <a href="<?php echo get_account_subpageUrl('metadata', 'files') ?>">
+                            Files
+                            <span class="tooltip_custom tool_tip tooltip_side">Files</span>
+                        </a>
                     </li>
                 </ul>
             </div>
