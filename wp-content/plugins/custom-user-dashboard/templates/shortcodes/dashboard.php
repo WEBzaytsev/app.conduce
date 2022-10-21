@@ -2,11 +2,19 @@
     <?php require_once(UD_PLUGIN_PATH . "templates/shortcodes/header.php"); ?>
     <div class="outer_wrapper_myaccount">
         <div class="content_left_myaccount_main">
-            <span class="arrow-icon-menu mobile_icon_pc_view"><span
-                        class="tooltip_custom tool_tip">Toggle sidebar</span></span>
+<!--            <span class="arrow-icon-menu mobile_icon_pc_view">-->
+<!--                <span class="tooltip_custom tool_tip">Toggle sidebar</span>-->
+<!--            </span>-->
             <div class="dashboard_wrapper">
                 <div class="menu_navigation_mobile"></div>
-                <h5 class="content_left_heading_myaccount dashboard_head">Dashboard</h5>
+<!--                <h5 class="content_left_heading_myaccount dashboard_head">Dashboard</h5>-->
+                <?php get_template_part(
+                        '/templates/common/toggle-sidebar-button',
+                        null,
+                        array(
+                                'text' => 'Dashboard'
+                        )
+                ); ?>
                 <ul class="left_content_link">
                     <li data-current="home"
                         class="my_account_content_link tooltip_trigger home-icon <?php if (($_GET['tab'] == 'dashboard' || $_GET['tab'] == '') && $_GET['current'] == '') echo 'active_li_menu active_li_menu' ?>">
@@ -41,13 +49,7 @@
                 </ul>
             </div>
             <!-- FIXED LAYOUT START -->
-            <div class="lower_content_myaccount">
-                <a href="<?php echo esc_url('https://docs.conduce.io'); ?>"
-                   class="content_left_footer_myaccount tooltip_trigger">
-                    Guide
-                    <span class="tooltip_custom tool_tip tooltip_side">Learn how to use the dashboard</span>
-                </a>
-            </div>
+            <?php get_template_part('/templates/common/guide-button'); ?>
             <!-- FIXED LAYOUT END -->
         </div>
 
