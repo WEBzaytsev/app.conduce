@@ -23,6 +23,7 @@
     #dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div{
         /* padding-top:65px; */
         padding-top:40px;
+        padding-bottom: 20px;
     }
 	#dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div a{
 		text-decoration:none;
@@ -126,6 +127,7 @@
 			font-size:18px;
 		}
 		#dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div{
+            padding-bottom: 20px;
 			padding-top:11px;
 		}
 		#dashboard_home_inner_wrapper_ID .dashboard_home_four_sec{
@@ -228,3 +230,25 @@
         </div>
     </div>
 </div>
+<script>
+    (function ($) {
+        $(window).on('load', () => {
+            const contentWrap = document.getElementById('dashboard_home_outer_wrapper_ID');
+
+            if (contentWrap.scrollHeight > contentWrap.clientHeight) {
+
+                $("#site_up_arrow").click(function () {
+                    const contentWrap = $('#dashboard_home_outer_wrapper_ID');
+
+                    contentWrap.animate(
+                        { scrollTop: 0 },
+                        300
+                    );
+                });
+            } else {
+                $("#site_up_arrow").css('display', 'none');
+            }
+        })
+
+    })(jQuery);
+</script>

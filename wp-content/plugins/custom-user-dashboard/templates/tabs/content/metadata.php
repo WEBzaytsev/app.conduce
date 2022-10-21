@@ -38,6 +38,7 @@
 		width:100%;
     }
     #dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div{
+        padding-bottom: 20px;
         padding-top:40px;
     }
     #dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div_first_row{
