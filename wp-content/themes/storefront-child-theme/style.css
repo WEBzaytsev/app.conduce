@@ -367,3 +367,21 @@ body .custom_my_account_main_div .outer_wrapper_myaccount .content_left_myaccoun
 	display: grid;
 	row-gap: 20px
 }
+
+.main_header .inner_wrapper_header .right_sec_header .user_log a:hover ~ .tool_tip {
+	bottom: -120%;
+	top: unset;
+}
+
+.main_header .nav_menu_right svg:hover ~ .tool_tip {
+	top: unset;
+	bottom: -59%;
+}
+
+.left_content_link .tooltip_custom.tooltip_side {
+	right: unset;
+	transform: translateY(-50%);
+	top: 50%;
+	bottom: unset;
+	left: 104%;
+}

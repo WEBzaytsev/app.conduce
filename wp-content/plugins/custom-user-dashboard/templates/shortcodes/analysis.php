@@ -13,8 +13,11 @@
                 ); ?>
                 <ul class="left_content_link">
                     <li data-current="control"
-                        class="my_account_content_link coming-icon <?php if (($_GET['tab'] == 'analysis' || $_GET['tab'] == '') && $_GET['current'] == '') echo 'active_li_menu active_li_menu' ?>">
-                        <a href="<?php echo get_account_pageUrl('analysis') ?>">Coming Soon</a>
+                        class="my_account_content_link coming-icon tooltip_trigger <?php if (($_GET['tab'] == 'analysis' || $_GET['tab'] == '') && $_GET['current'] == '') echo 'active_li_menu active_li_menu' ?>">
+                        <a href="<?php echo get_account_pageUrl('analysis') ?>">
+                            Coming Soon
+                            <span class="tooltip_custom tool_tip tooltip_side">Coming Soon</span>
+                        </a>
                     </li>
                 </ul>
             </div>
