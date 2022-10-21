@@ -2,26 +2,32 @@
     <?php require_once(UD_PLUGIN_PATH . "templates/shortcodes/header.php"); ?>
     <div class="outer_wrapper_myaccount">
         <div class="content_left_myaccount_main">
-			<span class="arrow-icon-menu mobile_icon_pc_view"></span>
             <div class="dashboard_wrapper">
                 <div class="menu_navigation_mobile"></div>
-                <h5 class="content_left_heading_myaccount dashboard_head">Metadata</h5>
+                <?php get_template_part(
+                    '/templates/common/toggle-sidebar-button',
+                    null,
+                    array(
+                        'text' => 'Metadata'
+                    )
+                ); ?>
                 <ul class="left_content_link">
-                    <li data-current="control" class="my_account_content_link control-icon <?php if( ( $_GET['tab'] == 'metadata' || $_GET['tab'] == '' ) && $_GET['current'] == '') echo'active_li_menu active_li_menu' ?>">
+                    <li data-current="control"
+                        class="my_account_content_link control-icon <?php if (($_GET['tab'] == 'metadata' || $_GET['tab'] == '') && $_GET['current'] == '') echo 'active_li_menu active_li_menu' ?>">
                         <a href="<?php echo get_account_pageUrl('metadata') ?>">Control</a>
                     </li>
-                    <li class="run-icon <?php if( $_GET['current'] == 'run' ) echo'active_li_menu' ?>" data-current="run" class="my_account_content_link">
+                    <li class="my_account_content_link run-icon <?php if ($_GET['current'] == 'run') echo 'active_li_menu' ?>"
+                        data-current="run">
                         <a href="<?php echo get_account_subpageUrl('metadata', 'run') ?>">Run</a>
                     </li>
-                    <li class="files-icon <?php if( $_GET['current'] == 'files' ) echo'active_li_menu' ?>" data-current="files" class="my_account_content_link">
+                    <li class="my_account_content_link files-icon <?php if ($_GET['current'] == 'files') echo 'active_li_menu' ?>"
+                        data-current="files">
                         <a href="<?php echo get_account_subpageUrl('metadata', 'files') ?>">Files</a>
                     </li>
-                </ul>                    
-            </div>            
-            <!-- FIXED LAYOUT START -->
-            <div class="lower_content_myaccount">
-				<h5 class="content_left_footer_myaccount">Guide<i class="fa fa-solid fa-expand"></i></h5>
+                </ul>
             </div>
+            <!-- FIXED LAYOUT START -->
+            <?php get_template_part('/templates/common/guide-button'); ?>
             <!-- FIXED LAYOUT END -->
         </div>
         <!-- CONTENT START -->
@@ -31,62 +37,65 @@
 
 </div>
 <script>
-    jQuery(document).ready(function($){
-        $.ajaxSetup({cache:false});
-        $(".left_content_link li").click(function(e){
-            pageurl = $(this).find('a').attr('href');
-            if(pageurl!=window.location) {
-                window.history.pushState({path: pageurl}, '', pageurl);
+    jQuery(document).ready(function ($) {
+        $.ajaxSetup({cache: false});
+        $(".left_content_link li").click(function (e) {
+            const pageUrl = $(this).find('a').attr('href');
+            if (pageUrl !== window.location) {
+                window.history.pushState({path: pageUrl}, '', pageUrl);
             }
-            $("#content_right_myaccount_main_ID").load(pageurl + ' #content_right_myaccount_main_inner_ID');
+            $("#content_right_myaccount_main_ID").load(pageUrl + ' #content_right_myaccount_main_inner_ID');
             $(".left_content_link li").removeClass('active_li_menu active_nav')
             $(this).addClass('active_li_menu active_nav');
             return false;
         });
-        $(document).on("click",".load-content",function(e) {    
+        $(document).on("click", ".load-content", function (e) {
             e.preventDefault();
             e.stopPropagation();
-            pageurl = $(this).attr('href');
-            $("#content_right_myaccount_main_ID").load(pageurl + ' #primary');
-            
+            const pageUrl = $(this).attr('href');
+            $("#content_right_myaccount_main_ID").load(pageUrl + ' #primary');
+
             return false;
         });
 
-    // preventing page from redirecting
-    $(document).on("dragover", "html", function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        $(".upload_file_container span").text("Drag here");
-    });
+        // preventing page from redirecting
+        $(document).on("dragover", "html", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            $(".upload_file_container span").text("Drag here");
+        });
 
-    $(document).on("drop", "html", function(e) { e.preventDefault(); e.stopPropagation(); });
+        $(document).on("drop", "html", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+        });
 
-    // Drag enter
-    $(document).on("dragenter",".upload_file_container",function(e) {
-        e.stopPropagation();
-        e.preventDefault();
-        $(".upload_file_container span").text("Drop");
-    });
+        // Drag enter
+        $(document).on("dragenter", ".upload_file_container", function (e) {
+            e.stopPropagation();
+            e.preventDefault();
+            $(".upload_file_container span").text("Drop");
+        });
 
-    // Drag over
-    $(document).on("dragover",".upload_file_container",function(e) {
-        e.stopPropagation();
-        e.preventDefault();
-        $(".upload_file_container span").text("Drop");
-    });
+        // Drag over
+        $(document).on("dragover", ".upload_file_container", function (e) {
+            e.stopPropagation();
+            e.preventDefault();
+            $(".upload_file_container span").text("Drop");
+        });
 
-    // Drop
-    $(document).on("drop",".upload_file_container",function(e) {
-        e.stopPropagation();
-        e.preventDefault();
-        $(".upload_file_container span").html("Click <span>Select<\/span> to continue");
-        $(".upload_file_container input[type='file']").prop("files", e.originalEvent.dataTransfer.files);
-    });
+        // Drop
+        $(document).on("drop", ".upload_file_container", function (e) {
+            e.stopPropagation();
+            e.preventDefault();
+            $(".upload_file_container span").html("Click <span>Select<\/span> to continue");
+            $(".upload_file_container input[type='file']").prop("files", e.originalEvent.dataTransfer.files);
+        });
 
-    // file selected
-    $(document).on("change","#file",function(e) {
-        $(".upload_file_container span").html("Click <span>Select<\/span> to continue");
-        //$(".upload_file_container input[type='file']").prop("files", $('#file')[0].files[0]);        
+        // file selected
+        $(document).on("change", "#file", function (e) {
+            $(".upload_file_container span").html("Click <span>Select<\/span> to continue");
+            //$(".upload_file_container input[type='file']").prop("files", $('#file')[0].files[0]);
+        });
     });
-});
 </script>
