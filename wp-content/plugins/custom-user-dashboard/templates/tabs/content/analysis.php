@@ -10,9 +10,9 @@
         padding-top:40px;
     }
     #dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div_first_row{
-        display:flex;
-        justify-content:space-between;
-		gap:20px;
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap:20px;
     }
     #dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div_second_row{
         display:flex;
@@ -138,7 +138,7 @@
 	}
 	#dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div_first_row a,
 	#dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div_second_row a{
-		width:50%;
+		width:100%;
 	}
 </style>
 <div class='dashboard_home_outer_wrapper' id='dashboard_home_outer_wrapper_ID'>
