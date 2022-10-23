@@ -4,22 +4,19 @@
     } */
     #user_profile_outer_wrapper_ID{
         width: 100%;
-        height: calc(100vh - 182px);
+        height: calc(100vh - 199px);
         padding: 40px;
-        overflow: scroll;
+        overflow: hidden auto;
     }
     #user_profile_outer_wrapper_ID hr{
         margin:0;
         background:#D8D8D8;
     }
     #user_profile_inner_wrapper_ID{
-        /* background:green; */
         width:100%;
-        height:80%;
     }
     #user_profile_outer_wrapper_ID #user_profile_form_outer_div_ID{
         width:400px;
-        /* background-color:yellow; */
         display:flex;
         justify-content:center;
         align-items:center;
@@ -192,7 +189,6 @@
         display:block;
         line-height:1;
         margin-top:10px;
-        padding-bottom:40px;
     }
     .confirmation_background{
         position: absolute;

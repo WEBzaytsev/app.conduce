@@ -133,11 +133,8 @@
 
     .custom_my_account_main_div .outer_wrapper_myaccount {
         display: flex;
-        min-height: 97vh;
         background: white;
-        /* box-shadow: 0px 0px 2px 2px #e2e2e2; */
         position: relative;
-        /*     border: 1px solid #d8d8d8; */
         justify-content: right;
     }
 
@@ -782,8 +779,8 @@
     }
 
     #dashboard_home_outer_wrapper_ID {
-        height: 80vh;
-        overflow: auto;
+        height: calc(100vh - 199px);
+        overflow: hidden auto;
     }
 
     #file_page_id .main_div_show_files .file_daownload_main::-webkit-scrollbar-thumb:hover {

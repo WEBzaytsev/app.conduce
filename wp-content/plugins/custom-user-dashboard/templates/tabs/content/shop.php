@@ -3,7 +3,6 @@
 <style>
      #dashboard_home_outer_wrapper_ID{
         width:100%;
-        display:flex;
 		padding: 40px;
     }
     #dashboard_home_outer_wrapper_ID p {
@@ -26,13 +25,7 @@
         color:#646464;
     }
     #dashboard_home_inner_wrapper_ID{
-        /* background-color:green; */
-/*         width:70%; */
-        height:80%;
-        display:flex;
-        /* align-items:center;
-        justify-content:center; */
-        flex-direction:column;
+        /*height: calc(100vh - 199px);*/
 		width:100%;
     }
     #dashboard_home_inner_wrapper_ID .dashboard_home_heading{
@@ -46,7 +39,6 @@
     #dashboard_home_inner_wrapper_ID .dashboard_home_welcome{
         font-size:20px;
 		color:#646464;
-       	margin-bottom:40;
         line-height: 1;
         margin-bottom: 35px;
     }

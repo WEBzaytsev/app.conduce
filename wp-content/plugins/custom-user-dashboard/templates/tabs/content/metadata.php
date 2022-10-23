@@ -1,11 +1,7 @@
 <style>
    
      #dashboard_home_outer_wrapper_ID{
-        /* background-color:red; */
         width:100%;
-        /* height:100vh; */
-        display:flex;
-/*         margin-top:45px; */
 		padding: 40px;
     }
     #dashboard_home_outer_wrapper_ID p {
@@ -28,17 +24,9 @@
         margin-top: 10px;
     }
     #dashboard_home_inner_wrapper_ID{
-        /* background-color:green; */
-/*         width:70%; */
-        height:80%;
-        display:flex;
-        /* align-items:center;
-        justify-content:center; */
-        flex-direction:column;
 		width:100%;
     }
     #dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div{
-        padding-bottom: 20px;
         padding-top:40px;
     }
     #dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div_first_row{
