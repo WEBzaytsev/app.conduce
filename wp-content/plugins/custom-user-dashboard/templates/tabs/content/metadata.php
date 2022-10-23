@@ -224,6 +224,5 @@
             $("#content_right_myaccount_main_ID").load(pageurl + ' #content_right_myaccount_main_inner_ID');
             return false;
         });
-        console.log('on page')
     });
 </script>

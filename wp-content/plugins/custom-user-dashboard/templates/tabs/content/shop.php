@@ -717,15 +717,5 @@ table.dataTable{
             $(".tab_shop_content").removeClass("active");
             $(".tab_shop_content#" + $(this).attr('data-name')).addClass("active");
         });
-
-        $.ajaxSetup({cache:false});
-        $(".left_content_link li a").click(function(e){
-            pageurl = $(this).attr('href');
-            if(pageurl!=window.location) {
-                window.history.pushState({path: pageurl}, '', pageurl);
-            }
-            $("#content_right_myaccount_main_ID").load(pageurl + ' #content_right_myaccount_main_inner_ID');
-            return false;
-        });
     });
 </script>

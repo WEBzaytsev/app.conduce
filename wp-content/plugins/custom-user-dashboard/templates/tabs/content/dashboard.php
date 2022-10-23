@@ -211,25 +211,3 @@
         </div>
     </div>
 </div>
-<script>
-    (function ($) {
-        $(window).on('load', () => {
-            const contentWrap = document.getElementById('dashboard_home_outer_wrapper_ID');
-
-            if (contentWrap.scrollHeight > contentWrap.clientHeight) {
-
-                $("#site_up_arrow").click(function () {
-                    const contentWrap = $('#dashboard_home_outer_wrapper_ID');
-
-                    contentWrap.animate(
-                        { scrollTop: 0 },
-                        300
-                    );
-                });
-            } else {
-                $("#site_up_arrow").css('display', 'none');
-            }
-        })
-
-    })(jQuery);
-</script>

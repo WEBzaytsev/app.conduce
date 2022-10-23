@@ -385,3 +385,7 @@ body .custom_my_account_main_div .outer_wrapper_myaccount .content_left_myaccoun
 	bottom: unset;
 	left: 104%;
 }
+
+#site_up_arrow {
+	border-radius: 5px;
+}
