@@ -112,6 +112,7 @@ input:checked + .slider:before {
 }
 .heading_setting_wrapper form{
     position:relative;
+    margin-bottom: 0;
 }
 .form_setting_wrapper{
     width:400px;    
@@ -211,11 +212,9 @@ input:checked + .slider:before {
     }
 /* ..................... */
     .setting_heading_main{
-        margin-left:40px;
-        margin-top:40px;
-        height:80%;
-        max-height:80%;
-        overflow:auto;
+        padding: 40px;
+        height: calc(100vh - 199px);
+        overflow: hidden auto;
         position:relative;
     }
     .setting_heading_main .heading_setting_wrapper h1{
@@ -403,6 +402,10 @@ input:checked + .slider:before {
         outline:none;
     }
 
+    div.nsl-container-block .nsl-container-buttons a {
+        margin: 0!important;
+    }
+
     div.nsl-container svg{
         height: 40px;
         width: 40px;
@@ -481,9 +484,9 @@ input:checked + .slider:before {
 </div>
 <script>
     (function($){
-        
 
-    
+
+
 
     })(jQuery)
 </script>

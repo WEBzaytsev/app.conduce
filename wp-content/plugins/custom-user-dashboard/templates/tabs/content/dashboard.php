@@ -1,29 +1,10 @@
 <style>
     #dashboard_home_outer_wrapper_ID{
-        /* background-color:red; */
         width:100%;
-        /* height:100vh; */
-        display:flex;
-/*         margin-top:45px; */
-        justify-content:center;
-		padding: 40px 40px 40px 40px;
-    }
-    #dashboard_home_inner_wrapper_ID{
-        /* background-color:green; */
-/*         width:70%; */
-        height:80%;
-        width:100%;
-        display:flex;
-        /* align-items:center;
-        justify-content:center; */
-        flex-direction:column;
-		/*max-width:1140px;
-		width:1140px;*/
+		padding: 40px;
     }
     #dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div{
-        /* padding-top:65px; */
         padding-top:40px;
-        padding-bottom: 20px;
     }
 	#dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div a{
 		text-decoration:none;

@@ -1,17 +1,9 @@
 <style>
      #dashboard_home_outer_wrapper_ID{
         width:100%;
-        display:flex;
 		padding: 40px;
     }
     #dashboard_home_inner_wrapper_ID{
-        /* background-color:green; */
-/*         width:70%; */
-        height:80%;
-        display:flex;
-        /* align-items:center;
-        justify-content:center; */
-        flex-direction:column;
 		width:100%;
     }
     #dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div{

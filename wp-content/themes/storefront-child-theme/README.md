@@ -13,4 +13,5 @@
 | fix sidebar | 4:10 hour | Particular remake sidebar. Fixed some markup issues. Fixed some JS issues. Added single components for same elements |
 | 10 slide | 1 hour | Particular remake sidebar. Fixed some markup issues. Fixed some JS issues. Added single components for same elements. Added tooltips for all sidebar items |
 | Start to fix scroll up button (11 slide) | 3:20 hour | In progress |
-| 11 slide | 10 min ||
+| 12 slide | 10 min ||
+| 13 slide | 1:20 hour |  |
