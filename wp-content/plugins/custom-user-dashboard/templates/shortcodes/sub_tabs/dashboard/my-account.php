@@ -668,5 +668,7 @@ $table_users = $wpdb->prefix.'users';
             $(`.formToggleEyeClass${id}`).attr('type','password');
 
         });
+
+        
     })(jQuery);
 </script>

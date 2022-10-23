@@ -175,6 +175,20 @@
             $("#content_right_myaccount_main_ID").load(pageurl + ' #content_right_myaccount_main_inner_ID');
             return false;
         });
-        console.log('on page')
+
+        const content = document.getElementById('dashboard_home_inner_wrapper_ID');
+
+        if (content) {
+
+            if (content.clientHeight < content.scrollHeight) {
+
+                $(document).on('click','#site_up_arrow',function(){
+                    $(content).animate(
+                        {scrollTop:0},
+                        500,
+                        'swing');
+                })
+            }
+        }
     });
 </script>
