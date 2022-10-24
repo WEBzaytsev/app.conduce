@@ -20,3 +20,4 @@
 | 16 slide | 0 | was done later |
 | 17 slide | 15 min |  |
 | 18 slide | 0 | was done later |
+| 19 slide | 15 min ||
