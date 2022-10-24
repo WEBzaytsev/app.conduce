@@ -1,26 +1,44 @@
 (function ($) {
 
     $(document).ready(function () {
-        /*$('#shopInvoices').DataTable({
+        $('#shopInvoices').DataTable({
             dom: 'lpftrip',
-        });*/
+        });
 
         $.ajaxSetup({cache: false});
-        $(".left_content_link li a").click(function (e) {
-            const pageUrl = $(this).attr('href');
-            if (pageUrl !== window.location) {
-                window.history.pushState({path: pageUrl}, '', pageUrl);
-            }
-            $("#content_right_myaccount_main_ID").load(
-                pageUrl + ' #content_right_myaccount_main_inner_ID',
-                scrollUp);
 
+        $(".left_content_link li a").click(function (e) {
+            e.preventDefault();
+            const pageUrl = $(this).attr('href');
+
+            if (pageUrl === window.location.href) {
+                return;
+            }
+
+            $("#content_right_myaccount_main_ID")
+                .load(
+                    pageUrl + ' #content_right_myaccount_main_inner_ID',
+                    () => afterContentUpdate($(this))
+                );
             return false;
         });
 
         scrollUp();
     })
 
+    function switchMenu(currentItem) {
+        $(".left_content_link li.active_li_menu.active_nav").removeClass('active_li_menu active_nav')
+        currentItem.addClass('active_li_menu active_nav');
+    }
+
+    function afterContentUpdate(currentItem) {
+        const url = currentItem.attr('href');
+
+        scrollUp();
+        switchMenu(currentItem.parent());
+
+        window.history.pushState({ path: url }, document.title, url);
+    }
 
     function scrollUp() {
         const content = document.getElementById('dashboard_home_outer_wrapper_ID') ||
