@@ -100,10 +100,12 @@
     } */
    #user_profile_outer_wrapper_ID .form_eye_toggle_class{
         position:absolute;
-        bottom: 3px;
-        right: 10px;
+       bottom: 6px;
+        right: 1px;
         cursor:pointer;
         color: #8cc8e1;
+       background-color: #fff;
+       padding: 2px 9px;
    }
    #user_profile_outer_wrapper_ID .form_eye_toggle_class_slash{
         display:none;
@@ -464,52 +466,59 @@ $table_users = $wpdb->prefix.'users';
             </div>
         </div>
         <hr>
-            <div class='user_profile_form_outer_div' id='user_profile_form_outer_div_ID'> 
-                 <form action='' method='post' id='user_profile_form_ID'>
-                <?php if($default_password_nag != 1 || $reset_pass_custom_mail){?>                   
-                    <p>
-                        <span class='span_pass_heading'>Password</span>
-    
-                        <span class='span_inside_p_pass' id='span_inside_p_pass_ID'>
+        <div class="user_profile_form_outer_div_relative">
+            <div class='user_profile_form_outer_div' id='user_profile_form_outer_div_ID'>
+                <form action='' method='post' id='user_profile_form_ID'>
+                    <?php if($default_password_nag != 1 || $reset_pass_custom_mail){?>
+                        <div class="my_account_controls">
+                            <button class="my_account_cancel">Cancel</button>
+                            <button type='submit' name='update_user_data' class="my_account_save">Save <img src="<?php echo UD_ASSETS_PATH . 'icons/check.svg'; ?>"></button>
+                            <button class="my_account_edit">Edit <img src="<?php echo UD_ASSETS_PATH . 'icons/pen-white.svg'; ?>"></button>
+                        </div>
+                        <p>
+                            <span class='span_pass_heading'>Password</span>
+
+                            <span class='span_inside_p_pass' id='span_inside_p_pass_ID'>
                             <label class='label_block'>Current password</label>
                             <input type='password' class='input_form_class formToggleEyeClass formToggleEyeClass1' name='form_current_pass' id='form_current_pass_ID'/>
                             <span class='form_eye_toggle_class form_eye_toggle_class1' id='1'><i class="fas fa-eye"></i></span>
                             <span class='form_eye_toggle_class_slash form_eye_toggle_class_slash1' id='1'><i class="fas fa-eye-slash"></i></span>
-    
+
                         </span>
-                    </p>
-                    <p>    
+                        </p>
+                        <p>
                         <span class='span_inside_p_pass' id='span_inside_pass_ID'>
                             <label class='label_block'>New password</label>
                             <input type='password' class='input_form_class formToggleEyeClass formToggleEyeClass2' name='form_new_pass' id='form_new_pass_ID'/>
                             <span class='form_eye_toggle_class form_eye_toggle_class2' id='2'><i class="fas fa-eye"></i></span>
                             <span class='form_eye_toggle_class_slash form_eye_toggle_class_slash2' id='2'><i class="fas fa-eye-slash"></i></span>
                         </span>
-                    </p>
-                    <p>    
+                        </p>
+                        <p>
                         <span class='span_inside_p_pass'>
                             <label class='label_block'>Confirm new password</label>
                             <input type='password' class='input_form_class formToggleEyeClass formToggleEyeClass3' name='form_new_confirm_pass' id='form_confirm_new_pass_ID' />
                             <span class='form_eye_toggle_class form_eye_toggle_class3' id='3'><i class="fas fa-eye"></i></span>
                             <span class='form_eye_toggle_class_slash form_eye_toggle_class_slash3' id='3'><i class="fas fa-eye-slash"></i></span>
                         </span>
-                    </p>
+                        </p>
 
-                <?php }else{?>
-                    <p class='p_password_change_background'>
-                    <span class='span_pass_heading'>Reset Password</span>
+                    <?php }else{?>
+                        <p class='p_password_change_background'>
+                            <span class='span_pass_heading'>Reset Password</span>
 
-                    <span class='span_inside_p_pass' id='span_inside_p_pass_ID'>
+                            <span class='span_inside_p_pass' id='span_inside_p_pass_ID'>
                         <label>Choose new password</label>
                         <input type='password' class='input_form_class formToggleEyeClass formToggleEyeClass1' name='form_reset_pass_custom' id='form_current_pass_ID'/>
                         <span class='form_eye_toggle_class form_eye_toggle_class1' id='1'><i class="fas fa-eye"></i></span>
                         <span class='form_eye_toggle_class_slash form_eye_toggle_class_slash1' id='1'><i class="fas fa-eye-slash"></i></span>
 
                     </span>
-                    </p>
-                <?php }?>                
-            </form>
+                        </p>
+                    <?php }?>
+                </form>
             </div>
+        </div>
             <hr>
             <div class='user_profile_form_outer_div' id='user_profile_form_outer_div_ID'> 
                 <div class="section-inner">

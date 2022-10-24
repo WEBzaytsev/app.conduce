@@ -22,6 +22,6 @@
 | 18 slide | 0 | was done later |
 | 19 slide | 15 min ||
 | 20 slide | 30 min ||
-| 21 slide |  ||
+| 21 slide | 50 min ||
 | 22 slide | 20 min ||
 | 23 slide | 1:20 hour ||
