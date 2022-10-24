@@ -422,7 +422,7 @@ $table_users = $wpdb->prefix.'users';
         <div class='change_user_info_error_div'>error</div>
         <div class='change_user_info_success_div'>success</div>
         <div class="heading_myaccount_wrapper">
-            <div class="myaccount_heading">My Account <span class="breadcrumps">DASHBOARD &gt; MY ACCOUNT</span></div>
+            <div class="myaccount_heading">My account <span class="breadcrumps">DASHBOARD &gt; MY ACCOUNT</span></div>
             <p>Manage your account.</p>
         </div>
         <div class="user_profile_form_outer_div_relative">
