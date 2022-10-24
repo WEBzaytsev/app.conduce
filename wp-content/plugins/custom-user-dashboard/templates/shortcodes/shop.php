@@ -12,14 +12,14 @@
                 ); ?>
                 <ul class="left_content_link">
                     <li data-current="control"
-                        class="my_account_content_link control-icon <?php if (($_GET['tab'] == 'metadata' || $_GET['tab'] == '') && $_GET['current'] == '') echo 'active_li_menu active_li_menu' ?>">
+                        class="my_account_content_link control-icon <?php if (($_GET['tab'] == 'metadata' || $_GET['tab'] == '') && $_GET['current'] == '') echo 'active_li_menu active_nav' ?>">
                         <a href="<?php echo get_account_pageUrl('metadata') ?>">Control</a>
                     </li>
-                    <li class="my_account_content_link run-icon <?php if ($_GET['current'] == 'run') echo 'active_li_menu' ?>"
+                    <li class="my_account_content_link run-icon <?php if ($_GET['current'] == 'run') echo 'active_li_menu active_nav' ?>"
                         data-current="run">
                         <a href="<?php echo get_account_subpageUrl('metadata', 'run') ?>">Run</a>
                     </li>
-                    <li class="my_account_content_link files-icon <?php if ($_GET['current'] == 'files') echo 'active_li_menu' ?>"
+                    <li class="my_account_content_link files-icon <?php if ($_GET['current'] == 'files') echo 'active_li_menu active_nav' ?>"
                         data-current="files">
                         <a href="<?php echo get_account_subpageUrl('metadata', 'files') ?>">Files</a>
                     </li>
@@ -37,17 +37,6 @@
 </div>
 <script>
     jQuery(document).ready(function ($) {
-        $.ajaxSetup({cache: false});
-        $(".left_content_link li").click(function (e) {
-            const pageUrl = $(this).find('a').attr('href');
-            if (pageUrl !== window.location) {
-                window.history.pushState({path: pageUrl}, '', pageUrl);
-            }
-            $("#content_right_myaccount_main_ID").load(pageUrl + ' #content_right_myaccount_main_inner_ID');
-            $(".left_content_link li").removeClass('active_li_menu active_nav')
-            $(this).addClass('active_li_menu active_nav');
-            return false;
-        });
         $(document).on("click", ".load-content", function (e) {
             e.preventDefault();
             e.stopPropagation();

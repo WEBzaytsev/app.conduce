@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
-
 <style>
      #dashboard_home_outer_wrapper_ID{
         width:100%;
@@ -267,10 +265,10 @@
         </div>
 
         <div class="tab_shop_content active" id="add">
-        <div class="setting_subheading">Add</div>
-        <p>For the beta version you can pay for three or ten runs. These account for any test runs that you may need.</p>        
-        
-        <div class="shop_offer">
+            <div class="setting_subheading">Add</div>
+            <p>For the beta version you can pay for three or ten runs. These account for any test runs that you may need.</p>
+
+            <div class="shop_offer">
             <ul class="shop_offer_labels">
                 <li>Runs</li>
                 <li>Active run downloads</li>
@@ -320,9 +318,9 @@
             </div>
         </div>
 
-        <div class="hr"></div> 
+            <div class="hr"></div>
 
-        <a href=""><button class="my_account_edit">FAQ <img src="<?php echo UD_ASSETS_PATH . 'icons/pen-white.svg'; ?>"></button></a>
+            <a href=""><button class="my_account_edit">FAQ <img src="<?php echo UD_ASSETS_PATH . 'icons/pen-white.svg'; ?>"></button></a>
         
         </div>
 
@@ -702,13 +700,9 @@ table.dataTable{
         </div>
     </div>
 </div>
-<script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 <script>
 
     jQuery(document).ready(function($){
-        $('#shopInvoices').DataTable({
-            dom: 'lpftrip'
-        });
 
         $(".shop_button").click(function(e){
             $(".shop_button").removeClass('active');

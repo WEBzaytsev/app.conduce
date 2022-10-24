@@ -16,6 +16,6 @@
 | 12 slide | 10 min ||
 | 13 slide | 1:20 hour |  |
 | 14 slide + finish 11 slide | 1:35 hour | Also finish 11 slide. Separate scrollUp function to single JS. Add hide\show a button depend by right content scrollable |
-| 15 slide |||
+| 15 slide | 1:40 | Fixed all items in all tabs. United all tabs implementation to single JS |
 | 16 slide | 0 | was done later |
 | 17 slide | 15 min |  |

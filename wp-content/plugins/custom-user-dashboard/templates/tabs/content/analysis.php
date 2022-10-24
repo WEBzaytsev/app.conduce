@@ -164,31 +164,3 @@
         </div>
     </div>
 </div>
-<script>
-    jQuery(document).ready(function($){
-        $.ajaxSetup({cache:false});
-        $(".left_content_link li a").click(function(e){
-            pageurl = $(this).attr('href');
-            if(pageurl!=window.location) {
-                window.history.pushState({path: pageurl}, '', pageurl);
-            }
-            $("#content_right_myaccount_main_ID").load(pageurl + ' #content_right_myaccount_main_inner_ID');
-            return false;
-        });
-
-        const content = document.getElementById('dashboard_home_inner_wrapper_ID');
-
-        if (content) {
-
-            if (content.clientHeight < content.scrollHeight) {
-
-                $(document).on('click','#site_up_arrow',function(){
-                    $(content).animate(
-                        {scrollTop:0},
-                        500,
-                        'swing');
-                })
-            }
-        }
-    });
-</script>
