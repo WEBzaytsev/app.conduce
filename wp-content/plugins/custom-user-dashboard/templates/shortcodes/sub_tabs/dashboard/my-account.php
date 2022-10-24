@@ -435,27 +435,31 @@ $table_users = $wpdb->prefix.'users';
                     </div>
 
                     <span class='span_pass_heading'>Details</span>
+
+                    <p>
+                        <label class='label_block'>Email</label>
+                        <input type='email' disabled class='input_form_class' value='<?php echo $email?>' name='form_email' id='Email_ID_userProfile'/>
+                    </p>
+
+                    <p>
+                        <label class='label_block'>Username</label>
+                        <input type='text' disabled class='input_form_class' value='<?php echo $displayname?>' name='form_displayName' id='displayName_ID_userProfile'/>
+                    </p>
+
                     <p class='p_first_last_name'>
                     <span class='first_last_name_span'>
-                        <label class='label_block'>First Name</label>
+                        <label class='label_block'>Full name</label>
                         <input type='text' disabled class='input_form_class_span' value='<?php echo $firstNameMeta?>' name='form_first_name' id='firstName_ID_userProfile'/>
                     </span>
                     </p>
-                    <p class='p_first_last_name'>
+                    <!--<p class='p_first_last_name'>
                     <span class='first_last_name_span'>
                         <label class='label_block' >Last Name</label>
-                        <input type='text' disabled class='input_form_class_span' value='<?php echo $lastNameMeta?>' name='form_last_name'/>
+                        <input type='text' disabled class='input_form_class_span' value='<?php /*echo $lastNameMeta*/?>' name='form_last_name'/>
                     </span>
 
-                    </p>
-                    <p>
-                        <label class='label_block'>Display name</label>
-                        <input type='text' disabled class='input_form_class' value='<?php echo $displayname?>' name='form_displayName' id='displayName_ID_userProfile'/>
-                    </p>
-                    <p>
-                        <label class='label_block'>Email address</label>
-                        <input type='email' disabled class='input_form_class' value='<?php echo $email?>' name='form_email' id='Email_ID_userProfile'/>
-                    </p>
+                    </p>-->
+
                 </form>
             </div>
         </div>
