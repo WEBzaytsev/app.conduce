@@ -24,3 +24,4 @@
 | 20 slide | 30 min ||
 | 21 slide |  ||
 | 22 slide | 20 min ||
+| 23 slide | 1:20 hour ||

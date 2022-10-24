@@ -398,3 +398,11 @@ body .custom_my_account_main_div .outer_wrapper_myaccount .content_left_myaccoun
 	top: 40px;
 	right: 0;
 }
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus {
+	outline: none!important;
+	border: 1px solid #2EAADC!important;
+}
