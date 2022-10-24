@@ -425,37 +425,39 @@ $table_users = $wpdb->prefix.'users';
             <div class="myaccount_heading">My Account <span class="breadcrumps">DASHBOARD &gt; MY ACCOUNT</span></div>
             <p>Manage your account.</p>
         </div>
-        <div class='user_profile_form_outer_div' id='user_profile_form_outer_div_ID'>            
-            <form action='' method='post' id='user_profile_form_ID'>
-            <div class="my_account_controls">
-                <button class="my_account_cancel">Cancel</button>
-                <button type='submit' name='update_user_data' class="my_account_save">Save <img src="<?php echo UD_ASSETS_PATH . 'icons/check.svg'; ?>"></button>
-                <button class="my_account_edit">Edit <img src="<?php echo UD_ASSETS_PATH . 'icons/pen-white.svg'; ?>"></button>
-            </div>
-            
-            <span class='span_pass_heading'>Details</span>
-                <p class='p_first_last_name'>                                 
+        <div class="user_profile_form_outer_div_relative">
+            <div class='user_profile_form_outer_div' id='user_profile_form_outer_div_ID'>
+                <form action='' method='post' id='user_profile_form_ID'>
+                    <div class="my_account_controls">
+                        <button class="my_account_cancel">Cancel</button>
+                        <button type='submit' name='update_user_data' class="my_account_save">Save <img src="<?php echo UD_ASSETS_PATH . 'icons/check.svg'; ?>"></button>
+                        <button class="my_account_edit">Edit <img src="<?php echo UD_ASSETS_PATH . 'icons/pen-white.svg'; ?>"></button>
+                    </div>
+
+                    <span class='span_pass_heading'>Details</span>
+                    <p class='p_first_last_name'>
                     <span class='first_last_name_span'>
                         <label class='label_block'>First Name</label>
                         <input type='text' disabled class='input_form_class_span' value='<?php echo $firstNameMeta?>' name='form_first_name' id='firstName_ID_userProfile'/>
                     </span>
-                </p>
-                <p class='p_first_last_name'>    
+                    </p>
+                    <p class='p_first_last_name'>
                     <span class='first_last_name_span'>
                         <label class='label_block' >Last Name</label>
                         <input type='text' disabled class='input_form_class_span' value='<?php echo $lastNameMeta?>' name='form_last_name'/>
                     </span>
-                 
-                </p>
-                <p>
-                    <label class='label_block'>Display name</label>
-                    <input type='text' disabled class='input_form_class' value='<?php echo $displayname?>' name='form_displayName' id='displayName_ID_userProfile'/>
-                </p>
-                <p>
-                    <label class='label_block'>Email address</label>
-                    <input type='email' disabled class='input_form_class' value='<?php echo $email?>' name='form_email' id='Email_ID_userProfile'/>
-                </p>
-             </form>
+
+                    </p>
+                    <p>
+                        <label class='label_block'>Display name</label>
+                        <input type='text' disabled class='input_form_class' value='<?php echo $displayname?>' name='form_displayName' id='displayName_ID_userProfile'/>
+                    </p>
+                    <p>
+                        <label class='label_block'>Email address</label>
+                        <input type='email' disabled class='input_form_class' value='<?php echo $email?>' name='form_email' id='Email_ID_userProfile'/>
+                    </p>
+                </form>
+            </div>
         </div>
         <hr>
             <div class='user_profile_form_outer_div' id='user_profile_form_outer_div_ID'> 

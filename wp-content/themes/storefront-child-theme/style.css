@@ -389,3 +389,12 @@ body .custom_my_account_main_div .outer_wrapper_myaccount .content_left_myaccoun
 #site_up_arrow {
 	border-radius: 5px;
 }
+
+.user_profile_form_outer_div_relative {
+	position: relative;
+}
+
+.user_profile_form_outer_div_relative .my_account_controls {
+	top: 40px;
+	right: 0;
+}
