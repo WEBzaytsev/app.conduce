@@ -32,3 +32,4 @@
 | 27 slide |  ||
 | 28 slide |  ||
 | 29 slide | 1 hour ||
+| addition to 21 slide | 30 min | Fixed show/hide pass icons for disabled inputs |

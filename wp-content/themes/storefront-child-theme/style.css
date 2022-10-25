@@ -440,3 +440,8 @@ input[type="password"]:invalid {
 	line-height: 17px;
 	text-transform: uppercase;
 }
+
+#user_profile_outer_wrapper_ID .input_form_class[disabled] + .form_eye_toggle_class,
+#user_profile_outer_wrapper_ID .input_form_class_span[disabled] + .form_eye_toggle_class {
+	background: #F5F5F5!important;
+}
