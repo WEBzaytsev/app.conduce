@@ -465,7 +465,7 @@ input:checked + .slider:before {
             <p class="p_first_last_name">                                 
                     <span class="first_last_name_span">
                         <label class="label_block">Email address</label>
-                        <input type="text" class="input_form_class_span" value="<?php echo $user->user_email ?>" name="form_first_name" id="firstName_ID_userProfile">
+                        <input type="email" class="input_form_class_span" value="<?php echo $user->user_email ?>" name="form_first_name" id="firstName_ID_userProfile">
                     </span>
             </p>
             <p>  
