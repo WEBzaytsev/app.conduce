@@ -415,3 +415,28 @@ input[type="password"]:invalid {
 	background: #FFF9F8!important;
 	border: 1px solid #E75D31!important;
 }
+
+.faq-button {
+	width: fit-content;
+	display: flex;
+	align-items: center;
+	background: #fff;
+	padding: 9px 10px;
+	border: 1px solid #D8D8D8;
+	border-radius: 5px;
+	column-gap: 10px;
+	transition: all ease .3s;
+}
+
+.faq-button:hover {
+	background-color: #F5F5F5;
+}
+
+.faq-button span {
+	color: #646464;
+	font-variation-settings: 'slnt' 0;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 17px;
+	text-transform: uppercase;
+}
