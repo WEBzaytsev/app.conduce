@@ -100,7 +100,7 @@
     } */
    #user_profile_outer_wrapper_ID .form_eye_toggle_class{
         position:absolute;
-       bottom: 6px;
+       bottom: 2px;
         right: 1px;
         cursor:pointer;
         color: #8cc8e1;
