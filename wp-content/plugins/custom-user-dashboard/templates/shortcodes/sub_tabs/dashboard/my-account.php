@@ -1,7 +1,4 @@
 <style>
-    /* *{
-        outline:1px solid green;
-    } */
     #user_profile_outer_wrapper_ID{
         width: 100%;
         height: calc(100vh - 199px);
@@ -21,11 +18,8 @@
         justify-content:center;
         align-items:center;
         padding-top:40px;
-        /* padding:30px; */
     }
     #user_profile_outer_wrapper_ID .first_last_name_span{
-        /* display:flex; */
-        /* flex-direction:column; */
         display:inline-block;
         width:100%; 
     }
@@ -37,7 +31,6 @@
         color:#646464;
     }
     #user_profile_outer_wrapper_ID #user_profile_form_ID{
-        /* background:orange; */
         width:100%;
     }
     #user_profile_outer_wrapper_ID .input_form_class_span{
@@ -69,15 +62,12 @@
         border-color:#D8D8D8;
     }
     #user_profile_outer_wrapper_ID .p_first_last_name{
-        /* display:flex;
-        justify-content:space-between; */
         display: flex;
         column-gap: 2em;
         margin-bottom: 20px;
     }
     #user_profile_outer_wrapper_ID .p_password_change_background{
         background-color:#f8f6f4;
-        /* background-color:#8ed1fc; */
         padding:30px;
     }
     #user_profile_outer_wrapper_ID .span_pass_heading{
@@ -92,12 +82,6 @@
         margin-bottom:20px;
         position:relative;
     }
-    /* #user_profile_outer_wrapper_ID #span_inside_p_pass_ID{
-        position:relative;
-    }
-    #user_profile_outer_wrapper_ID #span_inside_pass_ID{
-        position:relative;
-    } */
    #user_profile_outer_wrapper_ID .form_eye_toggle_class{
         position:absolute;
        bottom: 2px;
