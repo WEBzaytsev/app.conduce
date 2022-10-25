@@ -320,7 +320,12 @@
 
             <div class="hr"></div>
 
-            <a href=""><button class="my_account_edit">FAQ <img src="<?php echo UD_ASSETS_PATH . 'icons/pen-white.svg'; ?>"></button></a>
+            <a href="<?php echo esc_url('https://www.conduce.io/tools/'); ?>"
+               target="_blank"
+               class="faq-button">
+                <span>FAQ</span>
+                <img src="<?php echo UD_ASSETS_PATH . 'icons/faq-icon.png'; ?>" alt="icon">
+            </a>
         
         </div>
 
