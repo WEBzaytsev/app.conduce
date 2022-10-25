@@ -21,7 +21,7 @@
     }
     #user_profile_outer_wrapper_ID .first_last_name_span{
         display:inline-block;
-        width:100%; 
+        width:100%;
     }
     #user_profile_outer_wrapper_ID .label_block{
         display:block;
@@ -199,7 +199,7 @@
     .delete_user_button:hover{
         background-color:white;
         color:red;
-        border: 2px solid red;
+        border: 1px solid red;
     }
     .delete_account_button{
         width: 100%;
@@ -283,7 +283,7 @@
         }
     }
 </style>
-<?php 
+<?php
 
 global $wpdb;
 $user_id = get_current_user_id();
@@ -387,13 +387,13 @@ $table_users = $wpdb->prefix.'users';
 
     global $wpdb;
     $user_id = get_current_user_id();
-    // $user_id = 
+    // $user_id =
     $user = get_user_by('ID',$user_id);
     $table_users = $wpdb->prefix.'users';
     // $user_first_last_name = explode(' ',$user->user_login);
     $email = $user->user_email;
     $displayname = $user->display_name;
-    // echo $user_id; 
+    // echo $user_id;
      $default_password_nag = $user->default_password_nag;
     // echo $default_password_nag = 1;
      $firstNameMeta = $user->first_name;
@@ -504,26 +504,26 @@ $table_users = $wpdb->prefix.'users';
             </div>
         </div>
             <hr>
-            <div class='user_profile_form_outer_div' id='user_profile_form_outer_div_ID'> 
+            <div class='user_profile_form_outer_div' id='user_profile_form_outer_div_ID'>
                 <div class="section-inner">
                     <p style="margin-bottom:40px;">
-                        <span class='span_pass_heading'>Sign out</span>    
+                        <span class='span_pass_heading'>Sign out</span>
                         <a href="?sign_out=1"><button class="signout">Sign out</button></a>
                     </p>
                 </div>
             </div>
             <hr>
-            <div class='user_profile_form_outer_div' id='user_profile_form_outer_div_ID'> 
+            <div class='user_profile_form_outer_div' id='user_profile_form_outer_div_ID'>
                 <div class="section-inner">
                     <p style="margin-bottom:0;">
-                        <span class='span_pass_heading'>Deletion</span>    
-                        <button class="delete-account delete_user_button">Delete your account</button>                        
+                        <span class='span_pass_heading'>Deletion</span>
+                        <button class="delete-account delete_user_button">Delete your account</button>
                     </p>
                 </div>
             </div>
-            <span class="span_deletion_note">This action cannot be undone and will permanently delete your account.</span>         
-    
-    <div class="confirmation_background">     
+            <span class="span_deletion_note">This action cannot be undone and will permanently delete your account.</span>
+
+    <div class="confirmation_background">
         <div class="delete_account_confirmation">
         <!--<span class="close"><i class="fa-regular fa-circle-xmark"></i></span>-->
             <p>This action cannot be undone. This will permanently delete your user.</p>
@@ -531,7 +531,7 @@ $table_users = $wpdb->prefix.'users';
                     <p class="signin_form_pTag signin_padding_extra"><span>Password</span></p>
                     <input type="password" name="account_password" class="signin_input_class" id="account_password_id">
                     <span class="form_eye_toggle_class form_eye_toggle_class1 has-tooltip" id="1"><i class="fas fa-eye"></i></span>
-                    <span class="form_eye_toggle_class_slash form_eye_toggle_class_slash1 has-tooltip" id="1"><i class="fas fa-eye-slash"></i></span> 
+                    <span class="form_eye_toggle_class_slash form_eye_toggle_class_slash1 has-tooltip" id="1"><i class="fas fa-eye-slash"></i></span>
                 </div>
             <button class="delete_account_button" name="delete_user_self">Delete User</button>
         </div>
@@ -668,6 +668,6 @@ $table_users = $wpdb->prefix.'users';
 
         });
 
-        
+
     })(jQuery);
 </script>
