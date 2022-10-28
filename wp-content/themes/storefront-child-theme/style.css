@@ -445,3 +445,15 @@ input[type="password"]:invalid {
 #user_profile_outer_wrapper_ID .input_form_class_span[disabled] + .form_eye_toggle_class {
 	background: #F5F5F5!important;
 }
+
+.confirmation_background {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: #000;
+	z-index: 10000;
+	opacity: .7;
+	display:none;
+}

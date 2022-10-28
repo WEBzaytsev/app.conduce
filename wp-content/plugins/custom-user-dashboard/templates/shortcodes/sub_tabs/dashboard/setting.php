@@ -200,17 +200,6 @@ input:checked + .slider:before {
 		cursor:pointer;
         width:20px;
     }
-    .confirmation_background{
-        position: fixed;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        background: #000;
-        z-index: 10000;
-        opacity: .7;
-        display:none;
-    }
 /* ..................... */
     .setting_heading_main{
         padding: 40px;

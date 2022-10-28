@@ -176,17 +176,6 @@
         line-height:1;
         margin-top:10px;
     }
-    .confirmation_background{
-        position: fixed;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        background: #000;
-        z-index: 10000;
-        opacity: .7;
-        display:none;
-    }
     .delete_user_button{
         color: white;
         background: red;
