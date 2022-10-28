@@ -434,6 +434,8 @@ if (!$primaryNav) {
 
             if (
                 target.hasClass('main_menu_nav') ||
+                target.hasClass('nav_menu_right') ||
+                target.parent().hasClass('nav_menu_right') ||
                 target.parent().hasClass('main_menu_nav') ||
                 target.hasClass('main_menu_nav-btn') ||
                 target.parent().hasClass('main_menu_nav-btn')
@@ -447,14 +449,20 @@ if (!$primaryNav) {
         })
 
         $(".main_header .nav_menu_right").click(function () {
-            const svg = $(this).find('svg');
-            const dropdown = svg.next();
-            dropdown.slideToggle("fast")
-            dropdown.addClass("show")
-            dropdown.css("display", "flex")
+            const dropdown = $(this).find('.main_menu_nav');
+
+            if (dropdown.hasClass('show')) {
+                dropdown.slideToggle("fast");
+                dropdown.removeClass("show");
+                dropdown.css("display", "none");
+                return;
+            }
+
+            dropdown.slideToggle("fast");
+            dropdown.addClass("show");
+            dropdown.css("display", "flex");
         });
 
-        $()
     })(jQuery)
 </script>
 
