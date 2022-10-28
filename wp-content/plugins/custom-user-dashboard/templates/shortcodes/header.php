@@ -783,6 +783,12 @@
         overflow: hidden auto;
     }
 
+    @media (max-width: 767px) {
+        #dashboard_home_outer_wrapper_ID {
+            height: calc(100vh - 102px);
+        }
+    }
+
     #file_page_id .main_div_show_files .file_daownload_main::-webkit-scrollbar-thumb:hover {
         background: #416470;
     }

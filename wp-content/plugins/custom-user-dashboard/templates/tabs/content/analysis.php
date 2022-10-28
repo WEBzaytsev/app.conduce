@@ -14,10 +14,10 @@
         grid-template-columns: repeat(2, 1fr);
         gap:20px;
     }
-    #dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div_second_row{
-        display:flex;
-        justify-content:space-between;
-		gap:20px;
+    @media(max-width: 767px) {
+        #dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div_first_row{
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
     #dashboard_home_inner_wrapper_ID .dashboard_home_four_sec{
         width:500px;

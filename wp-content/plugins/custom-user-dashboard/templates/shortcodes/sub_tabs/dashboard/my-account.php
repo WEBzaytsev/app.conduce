@@ -5,6 +5,12 @@
         padding: 40px;
         overflow: hidden auto;
     }
+
+    @media(max-width: 767px) {
+        #user_profile_outer_wrapper_ID{
+            height: calc(100vh - 102px);
+        }
+    }
     #user_profile_outer_wrapper_ID hr{
         margin:0;
         background:#D8D8D8;
