@@ -201,12 +201,13 @@ input:checked + .slider:before {
         width:20px;
     }
     .confirmation_background{
-        position: absolute;
+        position: fixed;
         left: 0;
         top: 0;
         right: 0;
-        bottom: 100px;
+        bottom: 0;
         background: #000;
+        z-index: 10000;
         opacity: .7;
         display:none;
     }
