@@ -203,9 +203,16 @@ input:checked + .slider:before {
 /* ..................... */
     .setting_heading_main{
         padding: 40px;
-        height: calc(100vh - 199px);
+        height: calc(100vh - 168px);
         overflow: hidden auto;
         position:relative;
+        overflow: -moz-scrollbars-none
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .setting_heading_main::-webkit-scrollbar {
+        display: none;
     }
 
     @media (max-width: 767px) {

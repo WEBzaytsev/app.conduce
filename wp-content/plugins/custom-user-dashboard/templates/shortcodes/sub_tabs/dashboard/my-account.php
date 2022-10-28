@@ -1,9 +1,16 @@
 <style>
     #user_profile_outer_wrapper_ID{
         width: 100%;
-        height: calc(100vh - 199px);
+        height: calc(100vh - 168px);
         padding: 40px;
         overflow: hidden auto;
+        overflow: -moz-scrollbars-none
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    #user_profile_outer_wrapper_ID::-webkit-scrollbar {
+        display: none;
     }
 
     @media(max-width: 767px) {

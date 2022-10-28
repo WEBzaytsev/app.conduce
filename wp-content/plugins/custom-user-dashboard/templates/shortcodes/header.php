@@ -779,8 +779,15 @@
     }
 
     #dashboard_home_outer_wrapper_ID {
-        height: calc(100vh - 199px);
+        height: calc(100vh - 168px);
         overflow: hidden auto;
+        overflow: -moz-scrollbars-none
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    #dashboard_home_outer_wrapper_ID::-webkit-scrollbar {
+        display: none;
     }
 
     @media (max-width: 767px) {
