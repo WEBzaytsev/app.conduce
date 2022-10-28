@@ -167,7 +167,7 @@ input:checked + .slider:before {
     position: relative;
 }
 .my_account_controls{
-    right:40px;
+    right:0;
     top:110px;
 }
 .form_eye_toggle_class{
@@ -233,11 +233,10 @@ input:checked + .slider:before {
         font-weight: 600;
         color: #040404;
         line-height:1;
-        margin-right:40px;
         position:relative;
     }
     .setting_heading_main hr{
-        margin: 40px 40px 40px 0;
+        margin: 40px 0;
         background: #D8D8D8;
     }
     .heading_setting_wrapper .select-first-page{
