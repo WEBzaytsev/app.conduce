@@ -207,6 +207,13 @@ input:checked + .slider:before {
         overflow: hidden auto;
         position:relative;
     }
+
+    @media (max-width: 767px) {
+        .setting_heading_main {
+            height: calc(100vh - 102px);
+        }
+    }
+
     .setting_heading_main .heading_setting_wrapper h1{
         font-size: 30px;
         margin-bottom: 10px;
