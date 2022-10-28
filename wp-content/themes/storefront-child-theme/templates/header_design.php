@@ -395,8 +395,8 @@ if (!$primaryNav) {
                    href="<?php echo get_account_pageUrl('analysis') ?>">Analysis</a>
             </li>
             <li class="my_account_link_last <?php if ($_GET['tab'] == "shop") echo 'active_menu_item' ?> ">
-                <span class="my_account_link con_active_menu">
-                    <a class="active_menu_item" href="<?php echo get_account_pageUrl('shop') ?>">Shop</a>
+                <span class="my_account_link">
+                    <a class="" href="<?php echo get_account_pageUrl('shop') ?>">Shop</a>
                 </span>
             </li>
         </ul>

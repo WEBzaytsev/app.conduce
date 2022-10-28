@@ -126,10 +126,10 @@
         cursor: pointer;
     }
 
-    .my_account_sec_2 li a:hover {
-        color: #2871e3;
-        text-decoration: underline !important;
-    }
+    /*.my_account_sec_2 li a:hover {*/
+    /*    color: #2871e3;*/
+    /*    text-decoration: underline !important;*/
+    /*}*/
 
     .custom_my_account_main_div .outer_wrapper_myaccount {
         display: flex;
@@ -824,7 +824,7 @@
     }
 
     ul.my_account_menu .my_account_link:not(.active_menu):hover {
-        background: #FFF;
+        /*background: #FFF;*/
     }
 
     ul.my_account_menu li.my_account_link a,
