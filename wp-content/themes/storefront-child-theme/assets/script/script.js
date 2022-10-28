@@ -7,9 +7,12 @@
 
         $.ajaxSetup({cache: false});
 
-        $(".left_content_link li a").click(function (e) {
-            e.preventDefault();
-            const pageUrl = $(this).attr('href');
+        $(".left_content_link li a").click((e) => e.preventDefault());
+
+        $(".left_content_link li").click(function (e) {
+            const link = $(this).find('a');
+            const pageUrl = link.attr('href');
+            console.log(pageUrl)
 
             if (pageUrl === window.location.href) {
                 return;
@@ -18,7 +21,7 @@
             $("#content_right_myaccount_main_ID")
                 .load(
                     pageUrl + ' #content_right_myaccount_main_inner_ID',
-                    () => afterContentUpdate($(this))
+                    () => afterContentUpdate($(this), pageUrl)
                 );
             return false;
         });
@@ -27,15 +30,13 @@
     })
 
     function switchMenu(currentItem) {
-        $(".left_content_link li.active_li_menu.active_nav").removeClass('active_li_menu active_nav')
+        $(".left_content_link li.active_li_menu").removeClass('active_li_menu active_nav')
         currentItem.addClass('active_li_menu active_nav');
     }
 
-    function afterContentUpdate(currentItem) {
-        const url = currentItem.attr('href');
-
+    function afterContentUpdate(currentItem, url) {
         scrollUp();
-        switchMenu(currentItem.parent());
+        switchMenu(currentItem);
 
         window.history.pushState({ path: url }, document.title, url);
     }
