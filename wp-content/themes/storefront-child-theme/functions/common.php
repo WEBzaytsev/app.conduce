@@ -392,3 +392,25 @@ function user_registration_callback(){
                 ]);
         }
 }
+
+if (!function_exists('storefront_delete_account_modal')) {
+    function storefront_delete_account_modal() { ?>
+
+        <div class="confirmation_background">
+            <div class="delete_account_confirmation">
+                <!--<span class="close"><i class="fa-regular fa-circle-xmark"></i></span>-->
+                <p>This action cannot be undone. This will permanently delete your user.</p>
+                <div class="email_p_relative">
+                    <p class="signin_form_pTag signin_padding_extra"><span>Password</span></p>
+                    <input type="password" name="account_password" class="signin_input_class" id="account_password_id">
+                    <span class="form_eye_toggle_class form_eye_toggle_class1 has-tooltip" id="1"><i class="fas fa-eye"></i></span>
+                    <span class="form_eye_toggle_class_slash form_eye_toggle_class_slash1 has-tooltip" id="1"><i class="fas fa-eye-slash"></i></span>
+                </div>
+                <button class="delete_account_button" name="delete_user_self">Delete User</button>
+            </div>
+        </div>
+
+    <?php }
+}
+
+add_action('storefront_modals', 'storefront_delete_account_modal', 10);
