@@ -11,6 +11,10 @@ Version:      	0.8.4
 *, html, a, button, input, textbox, p, h1, h2, h3, h4, h5, h6, ul, li, span, div{
 	font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
+body {
+	height: 100vh;
+}
+
 input[type='submit']{
 	outline:none !important;
 }
@@ -251,7 +255,6 @@ gap: 0;
 	font-size:12px;
 }
 .site-footer{
-	position:fixed;
 	bottom:0;
 	width:100%;
 	background: #fff;
@@ -460,4 +463,14 @@ input[type="password"]:invalid {
 	z-index: 10000;
 	opacity: .7;
 	display:none;
+}
+
+#content > .col-full,
+#content > .col-full > #primary,
+#content > .col-full > #primary > .site-main,
+#content > .col-full > #primary > .site-main > .hentry,
+#content > .col-full > #primary > .site-main > .hentry > .entry-content,
+#content > .col-full > #primary > .site-main > .hentry > .entry-content > .custom_my_account_main_div,
+#content > .col-full > #primary > .site-main > .hentry > .entry-content > .custom_my_account_main_div > .outer_wrapper_myaccount {
+	height: 100%;
 }
