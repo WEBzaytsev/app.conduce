@@ -126,9 +126,9 @@
     .setting_subheading + p{
         font-size: 14px;
         color: #646464;
-        margin-bottom: 0;
+        margin-bottom: 0!important;
         line-height:1;
-        margin-top: 20px;
+        margin-top: 0!important;
     }
 	@media(max-width:768px){
 		#dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div_first_row,
@@ -215,7 +215,12 @@
             <div class="hr"></div> 
         <div class="setting_subheading">Guide</div>
         <p>Learn how to use the tool.</p>
-        <a href=""><button class="my_account_edit">Guide <img src="<?php echo UD_ASSETS_PATH . 'icons/pen-white.svg'; ?>"></button></a>
+            <a href="<?php echo esc_url('https://docs.conduce.io'); ?>"
+               target="_blank"
+               class="faq-button blue">
+                <span>Guide</span>
+                <img src="<?php echo UD_ASSETS_PATH . 'icons/pen-white.svg'; ?>" alt="icon">
+            </a>
         </div>
     </div>
 </div>

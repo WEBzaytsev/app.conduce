@@ -435,8 +435,16 @@ input[type="password"]:invalid {
 	transition: all ease .3s;
 }
 
+.faq-button.blue {
+	background: #2EAADC;
+}
+
 .faq-button:hover {
 	background-color: #F5F5F5;
+}
+
+.faq-button.blue:hover {
+	background: #2EAADC;
 }
 
 .faq-button span {
@@ -446,6 +454,11 @@ input[type="password"]:invalid {
 	font-size: 14px;
 	line-height: 17px;
 	text-transform: uppercase;
+}
+
+.faq-button.blue span {
+	text-transform: capitalize;
+	color: #fff;
 }
 
 #user_profile_outer_wrapper_ID .input_form_class[disabled] + .form_eye_toggle_class,
