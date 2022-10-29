@@ -527,3 +527,7 @@ input[type="password"]:invalid {
 .delete_account_confirmation-input-eye.active {
 	display: block;
 }
+
+.heading_setting_wrapper form .select2 {
+	margin-top: 10px;
+}
