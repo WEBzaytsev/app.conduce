@@ -54,7 +54,14 @@
                 $(this).removeClass('active');
                 $('.delete_account_confirmation-input-eye.show').addClass('active');
             }
-        })
+        });
+
+        const selects = $('select');
+        selects.each(function () {
+            $(this).select2({
+                minimumResultsForSearch: -1,
+            });
+        });
 
         scrollUp();
     })
