@@ -75,10 +75,6 @@
 </div>
 <script>
     jQuery(document).ready(function ($) {
-        $(document).on("click", ".delete_user_button", function (e) {
-            e.preventDefault()
-            $('.confirmation_background').fadeIn(300);
-        })
 
         $(document).on("click", ".delete_account_button", function (e) {
             const elem = $('#account_password_id');
@@ -110,10 +106,6 @@
             $(`.form_eye_toggle_class_slash${id}`).css('display', 'none');
             $(`.form_eye_toggle_class${id}`).css('display', 'block');
             $('#account_password_id').attr('type', 'password');
-        });
-
-        $(document).on('click', '.confirmation_background', function (e) {
-            $('.confirmation_background').fadeOut(300);
         });
 
         $(document).on('click', 'button.my_account_edit', function (e) {
