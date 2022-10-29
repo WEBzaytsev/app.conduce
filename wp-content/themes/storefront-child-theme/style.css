@@ -459,10 +459,14 @@ input[type="password"]:invalid {
 	top: 0;
 	right: 0;
 	bottom: 0;
-	background: #000;
+	background: rgba(0,0,0,.7);
 	z-index: 10000;
-	opacity: .7;
+	opacity: 1;
 	display:none;
+}
+
+.confirmation_background .close {
+	cursor: pointer;
 }
 
 #content > .col-full,
@@ -473,4 +477,40 @@ input[type="password"]:invalid {
 #content > .col-full > #primary > .site-main > .hentry > .entry-content > .custom_my_account_main_div,
 #content > .col-full > #primary > .site-main > .hentry > .entry-content > .custom_my_account_main_div > .outer_wrapper_myaccount {
 	height: 100%;
+}
+
+.delete_account_confirmation-input {
+	position: relative;
+	display: block;
+}
+
+.delete_account_confirmation-input input {
+	display: block;
+	width: 100%;
+	position: relative;
+	z-index: 1;
+	background: #fff;
+	border: 1px solid transparent;
+}
+
+.delete_account_confirmation-input input:focus {
+	background: #fff;
+}
+
+.delete_account_confirmation-input-eye {
+	color: #8cc8e1;
+	position: absolute;
+	z-index: 2;
+	background-color: #fff;
+	padding: 2px 9px;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 1px;
+	width: fit-content;
+	cursor: pointer;
+	display: none;
+}
+
+.delete_account_confirmation-input-eye.active {
+	display: block;
 }

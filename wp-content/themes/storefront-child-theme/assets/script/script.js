@@ -26,6 +26,36 @@
             return false;
         });
 
+        $(document).on("click", ".delete_user_button", function (e) {
+            e.preventDefault()
+            $('.confirmation_background').fadeIn(300);
+        })
+
+        $(document).on('click', '.confirmation_background', function (e) {
+            $('.confirmation_background').fadeOut(300);
+        });
+
+        $(document).on('click', '.delete_account_confirmation .close', function (e) {
+            $('.confirmation_background').fadeOut(300);
+        });
+
+        $('.delete_account_confirmation-input-eye').on('click', function (e) {
+            const passInput = $(this).parent().find('input');
+            const isShow = $(this).hasClass('show');
+
+            if (passInput.attr('type') === 'password' && isShow) {
+                passInput.attr('type', 'text');
+                $(this).removeClass('active');
+                $('.delete_account_confirmation-input-eye.hide').addClass('active');
+            }
+
+            if (passInput.attr('type') === 'text' && !isShow) {
+                passInput.attr('type', 'password');
+                $(this).removeClass('active');
+                $('.delete_account_confirmation-input-eye.show').addClass('active');
+            }
+        })
+
         scrollUp();
     })
 

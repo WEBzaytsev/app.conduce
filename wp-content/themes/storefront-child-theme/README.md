@@ -29,7 +29,7 @@
 | 24 slide | 40 min ||
 | 25 slide |  ||
 | 26 slide | 10 min ||
-| 27 slide |  ||
+| 27 slide | 4:10 hour | remake full modal window |
 | 28 slide |  ||
 | 29 slide | 1 hour ||
 | addition to 21 slide | 30 min | Fixed show/hide pass icons for disabled inputs |
