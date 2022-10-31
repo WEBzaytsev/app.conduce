@@ -1,11 +1,7 @@
 <style>
    
      #dashboard_home_outer_wrapper_ID{
-        /* background-color:red; */
         width:100%;
-        /* height:100vh; */
-        display:flex;
-/*         margin-top:45px; */
 		padding: 40px;
     }
     #dashboard_home_outer_wrapper_ID p {
@@ -28,23 +24,22 @@
         margin-top: 10px;
     }
     #dashboard_home_inner_wrapper_ID{
-        /* background-color:green; */
-/*         width:70%; */
-        height:80%;
-        display:flex;
-        /* align-items:center;
-        justify-content:center; */
-        flex-direction:column;
 		width:100%;
     }
     #dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div{
         padding-top:40px;
     }
     #dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div_first_row{
-        display:flex;
-        justify-content:space-between;
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
 		gap:20px;
     }
+     @media(max-width: 767px) {
+         #dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div_first_row{
+             grid-template-columns: repeat(1, 1fr);
+         }
+     }
+
     #dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div_second_row{
         display:flex;
         justify-content:space-between;
@@ -68,7 +63,7 @@
     #dashboard_home_inner_wrapper_ID .dashboard_home_heading{
         font-size: 30px;
         margin-bottom: 20px;
-        font-weight: 500;
+        font-weight: 600;
         color: #040404;
         line-height: 1;
         position: relative;
@@ -131,9 +126,9 @@
     .setting_subheading + p{
         font-size: 14px;
         color: #646464;
-        margin-bottom: 0;
+        margin-bottom: 0!important;
         line-height:1;
-        margin-top: 20px;
+        margin-top: 0!important;
     }
 	@media(max-width:768px){
 		#dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div_first_row,
@@ -177,7 +172,7 @@
 	}
 	#dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div_first_row a,
 	#dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div_second_row a{
-		width:50%;
+		width:100%;
         text-decoration: none;
 	}
 </style>
@@ -220,21 +215,12 @@
             <div class="hr"></div> 
         <div class="setting_subheading">Guide</div>
         <p>Learn how to use the tool.</p>
-        <a href=""><button class="my_account_edit">Guide <img src="<?php echo UD_ASSETS_PATH . 'icons/pen-white.svg'; ?>"></button></a>
+            <a href="<?php echo esc_url('https://docs.conduce.io'); ?>"
+               target="_blank"
+               class="faq-button blue">
+                <span>Guide</span>
+                <img src="<?php echo UD_ASSETS_PATH . 'icons/pen-white.svg'; ?>" alt="icon">
+            </a>
         </div>
     </div>
 </div>
-<script>
-    jQuery(document).ready(function($){
-        $.ajaxSetup({cache:false});
-        $(".left_content_link li a").click(function(e){
-            pageurl = $(this).attr('href');
-            if(pageurl!=window.location) {
-                window.history.pushState({path: pageurl}, '', pageurl);
-            }
-            $("#content_right_myaccount_main_ID").load(pageurl + ' #content_right_myaccount_main_inner_ID');
-            return false;
-        });
-        console.log('on page')
-    });
-</script>

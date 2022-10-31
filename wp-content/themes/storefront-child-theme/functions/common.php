@@ -1,8 +1,12 @@
 <?php
 function common_scripts_callback(){
-    wp_enqueue_style("common_style", STOREFRONT_THEME_BASE_URL . '/assets/style/style.css');
-    wp_enqueue_script("common_script", STOREFRONT_THEME_BASE_URL . '/assets/script/script.js', ['jquery'] , "0.0.7" ,true);
+    wp_dequeue_style("select2");
+    wp_enqueue_style("common_select2", STOREFRONT_THEME_BASE_URL . '/assets/style/select2.css', [], "0.0.8");
+    wp_enqueue_style("common_style", STOREFRONT_THEME_BASE_URL . '/assets/style/style.css', ['common_select2'], "0.0.8");
+    wp_enqueue_script("common_script", STOREFRONT_THEME_BASE_URL . '/assets/script/script.js', ['jquery', 'select2'] , "0.0.8" ,true);
     wp_localize_script( 'common_script' , 'my_ajax_url' , [admin_url( 'admin-ajax.php' )]  );
+    wp_enqueue_style("datatables_style", '//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css');
+    wp_enqueue_script("datatables_script", '//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js', ['jquery'] , "" ,true);
     wp_enqueue_style('frontend_fontawesome','https://use.fontawesome.com/releases/v5.0.13/css/all.css');
     wp_enqueue_style( "dashicons" );
     wp_enqueue_style( 'load-fa', 'https://use.fontawesome.com/releases/v5.5.0/css/all.css' );
@@ -390,3 +394,36 @@ function user_registration_callback(){
                 ]);
         }
 }
+
+if (!function_exists('storefront_delete_account_modal')) {
+    function storefront_delete_account_modal() { ?>
+
+        <div class="confirmation_background">
+            <div class="delete_account_confirmation">
+                <span class="close">
+                    <i class="fa-regular fa-circle-xmark"></i>
+                </span>
+                <p>This action cannot be undone. This will permanently delete your user.</p>
+                <div class="email_p_relative">
+                    <p class="signin_form_pTag signin_padding_extra"><span>Password</span></p>
+                    <label class="delete_account_confirmation-input">
+                        <input type="password"
+                               name="account_password"
+                               class="signin_input_class"
+                               id="account_password_id">
+                        <span class="delete_account_confirmation-input-eye show active">
+                            <i class="fas fa-eye"></i>
+                        </span>
+                        <span class="delete_account_confirmation-input-eye hide">
+                            <i class="fas fa-eye-slash"></i>
+                        </span>
+                    </label>
+                </div>
+                <button class="delete_account_button" name="delete_user_self">Delete User</button>
+            </div>
+        </div>
+
+    <?php }
+}
+
+add_action('storefront_modals', 'storefront_delete_account_modal', 10);

@@ -1,42 +1,27 @@
 <style>
     #dashboard_home_outer_wrapper_ID{
-        /* background-color:red; */
         width:100%;
-        /* height:100vh; */
-        display:flex;
-/*         margin-top:45px; */
-        justify-content:center;
-		padding: 40px 40px 40px 40px;
-    }
-    #dashboard_home_inner_wrapper_ID{
-        /* background-color:green; */
-/*         width:70%; */
-        height:80%;
-        width:100%;
-        display:flex;
-        /* align-items:center;
-        justify-content:center; */
-        flex-direction:column;
-		/*max-width:1140px;
-		width:1140px;*/
+		padding: 40px;
     }
     #dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div{
-        /* padding-top:65px; */
         padding-top:40px;
     }
 	#dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div a{
 		text-decoration:none;
 	}
-    #dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div_first_row{
-        display:flex;
-        justify-content:space-between;
-		gap:20px;
+
+    #dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div_second_row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
-    #dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div_second_row{
-        display:flex;
-        justify-content:space-between;
-		gap:20px;
+
+    @media(max-width: 768px) {
+        #dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div_second_row {
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
+
     #dashboard_home_inner_wrapper_ID .dashboard_home_four_sec{
         width:500px;
 /*         height:170px; */
@@ -54,7 +39,7 @@
         font-size: 30px;
         line-height: 1;
 		margin-bottom:20px;
-        font-weight: 500;
+        font-weight: 600;
         color: #040404;
         position:relative;      
     }
@@ -84,7 +69,7 @@
     }
     #dashboard_home_inner_wrapper_ID .hsl_color_div_last{
       background-color:#F5F5F5;
-		width:calc(100% - 10px);
+		width:auto;
         border-radius:5px;
 		min-height:130px;        
 		padding: 20px 20px 20px 20px;
@@ -126,6 +111,7 @@
 			font-size:18px;
 		}
 		#dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div{
+            padding-bottom: 20px;
 			padding-top:11px;
 		}
 		#dashboard_home_inner_wrapper_ID .dashboard_home_four_sec{
@@ -152,7 +138,7 @@
 	}
 	#dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div_first_row a,
 	#dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div_second_row a{
-		width:50%;
+		width:100%;
 	}
 	
 </style>
@@ -163,67 +149,67 @@
             <p class='dashboard_home_welcome'>Dashboard home.</p>
         </div>
         <div class='dashboard_home_four_sec_div'>
-            <div class='dashboard_home_four_sec_div_first_row'>
-				<a href="<?php echo site_url() . "/my-account?tab=dashboard&current=my_account"; ?>">
-                <div class="dashboard_home_four_sec first_row_sec_same_color">
-                    <div class='dashboard_inside_four_sec'>
-                        <p class='p_insideFour_sec_head'>My account</p>
-                        <span class='fontIcon_color'><img src="<?php echo UD_ASSETS_PATH . 'icons/dir.svg'; ?>"></span>
-                    </div>
-                    <p class='p_description'>
-                        Manage your account.
-                    </p>
-                </div>
-				</a>
-				<a href="<?php echo site_url() . "/my-account/?tab=analysis"; ?>">
-                <div class="dashboard_home_four_sec first_row_sec_same_color">
-                    <div class='dashboard_inside_four_sec'>
-                        <p class='p_insideFour_sec_head'>Settings</p>
-                        <span class='fontIcon_color'><img src="<?php echo UD_ASSETS_PATH . 'icons/tools.svg'; ?>"></span>
-                        
-                    </div>
-                    <p class='p_description'>
-                        Organize the dashboard settings.
-                    </p>
-                </div>
-				</a>
-            </div>
             <div class='dashboard_home_four_sec_div_second_row'>
-				<a href="<?php  ?>">
-                <div class="dashboard_home_four_sec first_row_sec_same_color">
-                    <div class='dashboard_inside_four_sec'>
-                        <p class='p_insideFour_sec_head'>Shop</p>
-                        <span class='fontIcon_color'><img src="<?php echo UD_ASSETS_PATH . 'icons/shop-blue.svg'; ?>"></span>
+                <a href="<?php echo site_url() . "/my-account?tab=dashboard&current=my_account"; ?>">
+                    <div class="dashboard_home_four_sec first_row_sec_same_color">
+                        <div class='dashboard_inside_four_sec'>
+                            <p class='p_insideFour_sec_head'>My account</p>
+                            <span class='fontIcon_color'>
+                            <img src="<?php echo UD_ASSETS_PATH . 'icons/dir.svg'; ?>">
+                        </span>
+                        </div>
+                        <p class='p_description'>
+                            Manage your account.
+                        </p>
                     </div>
-                    <p class='p_description'>
-                       Add to your dashboard.
-                    </p>    
-                </div>
-				</a>
-				<a href="<?php echo site_url() . "/my-account?tab=dashboard&current=my_account"; ?>">
-                <div class="dashboard_home_four_sec blue_color_div">
-                    <div class='dashboard_inside_four_sec'>
-                        <p class='p_insideFour_sec_head'>Guide</p>
-                        <span class='fontIcon_color'><img src="<?php echo UD_ASSETS_PATH . 'icons/puzzle.svg'; ?>"></span>
+                </a>
+                <a href="<?php echo site_url() . "/my-account/?tab=dashboard&current=Settings"; ?>">
+                    <div class="dashboard_home_four_sec first_row_sec_same_color">
+                        <div class='dashboard_inside_four_sec'>
+                            <p class='p_insideFour_sec_head'>Settings</p>
+                            <span class='fontIcon_color'><img src="<?php echo UD_ASSETS_PATH . 'icons/tools.svg'; ?>"></span>
+
+                        </div>
+                        <p class='p_description'>
+                            Organize the dashboard settings.
+                        </p>
                     </div>
-                    <p class='p_description'>
-                        Learn how to use the dashboard.
-                    </p>
-                </div>
-				</a>
-               </div>
-               <div class='dashboard_home_four_sec_div_second_row'> 
-                <a href="<?php  ?>">
-                <div class="dashboard_home_four_sec white_color_div hsl_color_div_last">
-                    <div class='dashboard_inside_four_sec'>
-                        <p class='p_insideFour_sec_head'>Landing</p>
-                        <span class='fontIcon_color'><img src="<?php echo UD_ASSETS_PATH . 'icons/shop-blue.svg'; ?>"></span>
+                </a>
+                <a href="<?php echo site_url() . "/my-account/?tab=shop"; ?>">
+                    <div class="dashboard_home_four_sec first_row_sec_same_color">
+                        <div class='dashboard_inside_four_sec'>
+                            <p class='p_insideFour_sec_head'>Shop</p>
+                            <span class='fontIcon_color'><img
+                                        src="<?php echo UD_ASSETS_PATH . 'icons/shop-blue.svg'; ?>"></span>
+                        </div>
+                        <p class='p_description'>
+                            Add to your dashboard.
+                        </p>
                     </div>
-                    <p class='p_description'>
-                       Go to the main site.
-                    </p>    
-                </div>
-				</a>
+                </a>
+                <a href="https://docs.conduce.io">
+                    <div class="dashboard_home_four_sec blue_color_div">
+                        <div class='dashboard_inside_four_sec'>
+                            <p class='p_insideFour_sec_head'>Guide</p>
+                            <span class='fontIcon_color'><img src="<?php echo UD_ASSETS_PATH . 'icons/puzzle.svg'; ?>"></span>
+                        </div>
+                        <p class='p_description'>
+                            Learn how to use the dashboard.
+                        </p>
+                    </div>
+                </a>
+                <a href="https://www.conduce.io/">
+                    <div class="dashboard_home_four_sec white_color_div hsl_color_div_last">
+                        <div class='dashboard_inside_four_sec'>
+                            <p class='p_insideFour_sec_head'>Landing</p>
+                            <span class='fontIcon_color'><img
+                                        src="<?php echo UD_ASSETS_PATH . 'icons/C-logo-png.png'; ?>"></span>
+                        </div>
+                        <p class='p_description'>
+                            Go to the main site.
+                        </p>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
