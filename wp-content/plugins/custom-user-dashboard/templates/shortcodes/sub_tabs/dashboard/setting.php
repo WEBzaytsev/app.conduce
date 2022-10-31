@@ -112,6 +112,7 @@ input:checked + .slider:before {
 }
 .heading_setting_wrapper form{
     position:relative;
+    margin-bottom: 0;
 }
 .form_setting_wrapper{
     width:400px;    
@@ -166,7 +167,7 @@ input:checked + .slider:before {
     position: relative;
 }
 .my_account_controls{
-    right:40px;
+    right:0;
     top:110px;
 }
 .form_eye_toggle_class{
@@ -199,25 +200,27 @@ input:checked + .slider:before {
 		cursor:pointer;
         width:20px;
     }
-    .confirmation_background{
-        position: absolute;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 100px;
-        background: #000;
-        opacity: .7;
-        display:none;
-    }
 /* ..................... */
     .setting_heading_main{
-        margin-left:40px;
-        margin-top:40px;
-        height:80%;
-        max-height:80%;
-        overflow:auto;
+        padding: 40px;
+        height: calc(100vh - 168px);
+        overflow: hidden auto;
         position:relative;
+        overflow: -moz-scrollbars-none
+        -ms-overflow-style: none;
+        scrollbar-width: none;
     }
+
+    .setting_heading_main::-webkit-scrollbar {
+        display: none;
+    }
+
+    @media (max-width: 767px) {
+        .setting_heading_main {
+            height: calc(100vh - 102px);
+        }
+    }
+
     .setting_heading_main .heading_setting_wrapper h1{
         font-size: 30px;
         margin-bottom: 10px;
@@ -230,11 +233,10 @@ input:checked + .slider:before {
         font-weight: 600;
         color: #040404;
         line-height:1;
-        margin-right:40px;
         position:relative;
     }
     .setting_heading_main hr{
-        margin: 40px 40px 40px 0;
+        margin: 40px 0;
         background: #D8D8D8;
     }
     .heading_setting_wrapper .select-first-page{
@@ -403,6 +405,10 @@ input:checked + .slider:before {
         outline:none;
     }
 
+    div.nsl-container-block .nsl-container-buttons a {
+        margin: 0!important;
+    }
+
     div.nsl-container svg{
         height: 40px;
         width: 40px;
@@ -462,7 +468,7 @@ input:checked + .slider:before {
             <p class="p_first_last_name">                                 
                     <span class="first_last_name_span">
                         <label class="label_block">Email address</label>
-                        <input type="text" class="input_form_class_span" value="<?php echo $user->user_email ?>" name="form_first_name" id="firstName_ID_userProfile">
+                        <input type="email" class="input_form_class_span" value="<?php echo $user->user_email ?>" name="form_first_name" id="firstName_ID_userProfile">
                     </span>
             </p>
             <p>  
@@ -481,9 +487,9 @@ input:checked + .slider:before {
 </div>
 <script>
     (function($){
-        
 
-    
+
+
 
     })(jQuery)
 </script>

@@ -13,7 +13,7 @@
                 ); ?>
                 <ul class="left_content_link">
                     <li data-current="control"
-                        class="my_account_content_link coming-icon tooltip_trigger <?php if (($_GET['tab'] == 'analysis' || $_GET['tab'] == '') && $_GET['current'] == '') echo 'active_li_menu active_li_menu' ?>">
+                        class="my_account_content_link coming-icon tooltip_trigger <?php if (($_GET['tab'] == 'analysis' || $_GET['tab'] == '') && $_GET['current'] == '') echo 'active_li_menu active_nav' ?>">
                         <a href="<?php echo get_account_pageUrl('analysis') ?>">
                             Coming Soon
                             <span class="tooltip_custom tool_tip tooltip_side">Coming Soon</span>
@@ -31,18 +31,3 @@
     </div>
 
 </div>
-<script>
-    jQuery(document).ready(function ($) {
-        $.ajaxSetup({cache: false});
-        $(".left_content_link li").click(function (e) {
-            const pageUrl = $(this).find('a').attr('href');
-            if (pageUrl !== window.location) {
-                window.history.pushState({path: pageUrl}, '', pageUrl);
-            }
-            $("#content_right_myaccount_main_ID").load(pageUrl + ' #content_right_myaccount_main_inner_ID');
-            $(".left_content_link li").removeClass('active_li_menu active_nav')
-            $(this).addClass('active_li_menu active_nav');
-            return false;
-        });
-    });
-</script>

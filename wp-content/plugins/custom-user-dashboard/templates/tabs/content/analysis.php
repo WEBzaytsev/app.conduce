@@ -1,31 +1,23 @@
 <style>
      #dashboard_home_outer_wrapper_ID{
         width:100%;
-        display:flex;
 		padding: 40px;
     }
     #dashboard_home_inner_wrapper_ID{
-        /* background-color:green; */
-/*         width:70%; */
-        height:80%;
-        display:flex;
-        /* align-items:center;
-        justify-content:center; */
-        flex-direction:column;
 		width:100%;
     }
     #dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div{
         padding-top:40px;
     }
     #dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div_first_row{
-        display:flex;
-        justify-content:space-between;
-		gap:20px;
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap:20px;
     }
-    #dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div_second_row{
-        display:flex;
-        justify-content:space-between;
-		gap:20px;
+    @media(max-width: 767px) {
+        #dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div_first_row{
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
     #dashboard_home_inner_wrapper_ID .dashboard_home_four_sec{
         width:500px;
@@ -146,7 +138,7 @@
 	}
 	#dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div_first_row a,
 	#dashboard_home_inner_wrapper_ID .dashboard_home_four_sec_div_second_row a{
-		width:50%;
+		width:100%;
 	}
 </style>
 <div class='dashboard_home_outer_wrapper' id='dashboard_home_outer_wrapper_ID'>
@@ -172,17 +164,3 @@
         </div>
     </div>
 </div>
-<script>
-    jQuery(document).ready(function($){
-        $.ajaxSetup({cache:false});
-        $(".left_content_link li a").click(function(e){
-            pageurl = $(this).attr('href');
-            if(pageurl!=window.location) {
-                window.history.pushState({path: pageurl}, '', pageurl);
-            }
-            $("#content_right_myaccount_main_ID").load(pageurl + ' #content_right_myaccount_main_inner_ID');
-            return false;
-        });
-        console.log('on page')
-    });
-</script>

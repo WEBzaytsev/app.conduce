@@ -1,9 +1,6 @@
-<link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
-
 <style>
      #dashboard_home_outer_wrapper_ID{
         width:100%;
-        display:flex;
 		padding: 40px;
     }
     #dashboard_home_outer_wrapper_ID p {
@@ -26,19 +23,13 @@
         color:#646464;
     }
     #dashboard_home_inner_wrapper_ID{
-        /* background-color:green; */
-/*         width:70%; */
-        height:80%;
-        display:flex;
-        /* align-items:center;
-        justify-content:center; */
-        flex-direction:column;
+        /*height: calc(100vh - 199px);*/
 		width:100%;
     }
     #dashboard_home_inner_wrapper_ID .dashboard_home_heading{
         font-size: 30px;
         margin-bottom: 20px;
-        font-weight: 500;
+        font-weight: 600;
         color: #040404;
         line-height: 1;
         position: relative;
@@ -46,7 +37,6 @@
     #dashboard_home_inner_wrapper_ID .dashboard_home_welcome{
         font-size:20px;
 		color:#646464;
-       	margin-bottom:40;
         line-height: 1;
         margin-bottom: 35px;
     }
@@ -275,10 +265,10 @@
         </div>
 
         <div class="tab_shop_content active" id="add">
-        <div class="setting_subheading">Add</div>
-        <p>For the beta version you can pay for three or ten runs. These account for any test runs that you may need.</p>        
-        
-        <div class="shop_offer">
+            <div class="setting_subheading">Add</div>
+            <p>For the beta version you can pay for three or ten runs. These account for any test runs that you may need.</p>
+
+            <div class="shop_offer">
             <ul class="shop_offer_labels">
                 <li>Runs</li>
                 <li>Active run downloads</li>
@@ -328,9 +318,14 @@
             </div>
         </div>
 
-        <div class="hr"></div> 
+            <div class="hr"></div>
 
-        <a href=""><button class="my_account_edit">FAQ <img src="<?php echo UD_ASSETS_PATH . 'icons/pen-white.svg'; ?>"></button></a>
+            <a href="<?php echo esc_url('https://www.conduce.io/tools/'); ?>"
+               target="_blank"
+               class="faq-button">
+                <span>FAQ</span>
+                <img src="<?php echo UD_ASSETS_PATH . 'icons/faq-icon.png'; ?>" alt="icon">
+            </a>
         
         </div>
 
@@ -710,13 +705,9 @@ table.dataTable{
         </div>
     </div>
 </div>
-<script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 <script>
 
     jQuery(document).ready(function($){
-        $('#shopInvoices').DataTable({
-            dom: 'lpftrip'
-        });
 
         $(".shop_button").click(function(e){
             $(".shop_button").removeClass('active');
@@ -724,16 +715,6 @@ table.dataTable{
 
             $(".tab_shop_content").removeClass("active");
             $(".tab_shop_content#" + $(this).attr('data-name')).addClass("active");
-        });
-
-        $.ajaxSetup({cache:false});
-        $(".left_content_link li a").click(function(e){
-            pageurl = $(this).attr('href');
-            if(pageurl!=window.location) {
-                window.history.pushState({path: pageurl}, '', pageurl);
-            }
-            $("#content_right_myaccount_main_ID").load(pageurl + ' #content_right_myaccount_main_inner_ID');
-            return false;
         });
     });
 </script>

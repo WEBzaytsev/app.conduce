@@ -11,6 +11,10 @@ Version:      	0.8.5
 *, html, a, button, input, textbox, p, h1, h2, h3, h4, h5, h6, ul, li, span, div{
 	font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
+body {
+	height: 100vh;
+}
+
 input[type='submit']{
 	outline:none !important;
 }
@@ -251,7 +255,6 @@ gap: 0;
 	font-size:12px;
 }
 .site-footer{
-	position:fixed;
 	bottom:0;
 	width:100%;
 	background: #fff;
@@ -355,6 +358,10 @@ div.nsl-container .nsl-button-default div.nsl-button-label-container{
 	margin-bottom: 0!important;
 }
 
+body .custom_my_account_main_div .outer_wrapper_myaccount.sidebar-hide .content_left_myaccount_main ul {
+	margin-bottom: 10px;
+}
+
 body .custom_my_account_main_div .outer_wrapper_myaccount .content_left_myaccount_main ul {
 	cursor: default;
 }
@@ -384,4 +391,143 @@ body .custom_my_account_main_div .outer_wrapper_myaccount .content_left_myaccoun
 	top: 50%;
 	bottom: unset;
 	left: 104%;
+}
+
+#site_up_arrow {
+	border-radius: 5px;
+}
+
+.user_profile_form_outer_div_relative {
+	position: relative;
+}
+
+.user_profile_form_outer_div_relative .my_account_controls {
+	top: 40px;
+	right: 0;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus {
+	outline: none!important;
+	border: 1px solid #2EAADC!important;
+}
+
+input[type="text"]:invalid,
+input[type="email"]:invalid,
+input[type="tel"]:invalid,
+input[type="password"]:invalid {
+	outline: none!important;
+	background: #FFF9F8!important;
+	border: 1px solid #E75D31!important;
+}
+
+.faq-button {
+	width: fit-content;
+	display: flex;
+	align-items: center;
+	background: #fff;
+	padding: 9px 10px;
+	border: 1px solid #D8D8D8;
+	border-radius: 5px;
+	column-gap: 10px;
+	transition: all ease .3s;
+}
+
+.faq-button.blue {
+	background: #2EAADC;
+}
+
+.faq-button:hover {
+	background-color: #F5F5F5;
+}
+
+.faq-button.blue:hover {
+	background: #2EAADC;
+}
+
+.faq-button span {
+	color: #646464;
+	font-variation-settings: 'slnt' 0;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 17px;
+	text-transform: uppercase;
+}
+
+.faq-button.blue span {
+	text-transform: capitalize;
+	color: #fff;
+}
+
+#user_profile_outer_wrapper_ID .input_form_class[disabled] + .form_eye_toggle_class,
+#user_profile_outer_wrapper_ID .input_form_class_span[disabled] + .form_eye_toggle_class {
+	background: #F5F5F5!important;
+}
+
+.confirmation_background {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,.7);
+	z-index: 10000;
+	opacity: 1;
+	display:none;
+}
+
+.confirmation_background .close {
+	cursor: pointer;
+}
+
+#content > .col-full,
+#content > .col-full > #primary,
+#content > .col-full > #primary > .site-main,
+#content > .col-full > #primary > .site-main > .hentry,
+#content > .col-full > #primary > .site-main > .hentry > .entry-content,
+#content > .col-full > #primary > .site-main > .hentry > .entry-content > .custom_my_account_main_div,
+#content > .col-full > #primary > .site-main > .hentry > .entry-content > .custom_my_account_main_div > .outer_wrapper_myaccount {
+	height: 100%;
+}
+
+.delete_account_confirmation-input {
+	position: relative;
+	display: block;
+}
+
+.delete_account_confirmation-input input {
+	display: block;
+	width: 100%;
+	position: relative;
+	z-index: 1;
+	background: #fff;
+	border: 1px solid transparent;
+}
+
+.delete_account_confirmation-input input:focus {
+	background: #fff;
+}
+
+.delete_account_confirmation-input-eye {
+	color: #8cc8e1;
+	position: absolute;
+	z-index: 2;
+	background-color: #fff;
+	padding: 2px 9px;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 1px;
+	width: fit-content;
+	cursor: pointer;
+	display: none;
+}
+
+.delete_account_confirmation-input-eye.active {
+	display: block;
+}
+
+.heading_setting_wrapper form .select2 {
+	margin-top: 10px;
 }
