@@ -556,6 +556,7 @@
                         padding-top: 10px;
                     }
                 </style>
+
                 <table id="shopInvoices" class="display compact" style="width:100%">
                     <thead>
                     <tr>
@@ -801,7 +802,6 @@
                     </tbody>
                 </table>
 
-
             </div>
         </div>
 
@@ -809,7 +809,9 @@
         <div class="tab_shop_content" id="billing">
             <div class="setting_subheading">Account type</div>
             <p>Select whether you are an individual, company, or other organisation.</p>
-            <select class="select-account-type" name="account_type">
+
+            <select class="select-account-type"
+                    name="account_type">
                 <option value="individual">Individual</option>
                 <option value="company">Company</option>
                 <option value="organisation">Organisation</option>
