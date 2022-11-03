@@ -217,7 +217,7 @@
         column-gap: 10px;
     }
 
-    @media(max-width: 500px) {
+    @media (max-width: 500px) {
         .shop_offer {
             grid-template-columns: repeat(4, 25%);
         }
@@ -393,6 +393,10 @@
             margin-bottom: 35px;
         }
     }
+
+    select#form_country + .select2-container {
+        width: 100% !important;
+    }
 </style>
 <div class='dashboard_home_outer_wrapper' id='dashboard_home_outer_wrapper_ID'>
     <div class='dashboard_home_inner_wrapper' id='dashboard_home_inner_wrapper_ID'>
@@ -424,7 +428,7 @@
                     <span>$12.99</span>
                     <button class="">
                         <span>Purchase</span>
-                        <img src="<?php echo UD_ASSETS_PATH . 'icons/plus-icon.png'?>" alt="icon">
+                        <img src="<?php echo UD_ASSETS_PATH . 'icons/plus-icon.png' ?>" alt="icon">
                     </button>
                 </div>
 
@@ -433,7 +437,7 @@
                     <span>$19.99</span>
                     <button class="">
                         <span>Purchase</span>
-                        <img src="<?php echo UD_ASSETS_PATH . 'icons/plus-icon.png'?>" alt="icon">
+                        <img src="<?php echo UD_ASSETS_PATH . 'icons/plus-icon.png' ?>" alt="icon">
                     </button>
                 </div>
 
@@ -442,7 +446,7 @@
                     <span>$29.99</span>
                     <button class="">
                         <span>Purchase</span>
-                        <img src="<?php echo UD_ASSETS_PATH . 'icons/plus-icon.png'?>" alt="icon">
+                        <img src="<?php echo UD_ASSETS_PATH . 'icons/plus-icon.png' ?>" alt="icon">
                     </button>
                 </div>
 
@@ -857,6 +861,15 @@
                             <label class="label_block">Phone</label>
                             <input type="text" disabled="" class="input_form_class" value="" name="form_displayName"
                                    style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=&quot;);">
+                        </p>
+                        <p>
+                            <label class="label_block">Country</label>
+                            <select name="form_country" id="form_country" disabled="">
+                                <option value="uk">United Kingdom</option>
+                                <option value="1">test 1</option>
+                                <option value="2">test 2</option>
+                                <option value="3">test 3</option>
+                            </select>
                         </p>
                         <p>
                             <label class="label_block">Address</label>

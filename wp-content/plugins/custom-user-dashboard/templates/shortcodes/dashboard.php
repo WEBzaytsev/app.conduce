@@ -112,6 +112,7 @@
             e.preventDefault();
             $(this).hide();
             $(this).closest('form').find('input').prop('disabled', false);
+            $(this).closest('form').find('select').prop('disabled', false);
             $('button.my_account_save, button.my_account_cancel').css('display', 'flex');
         });
 
@@ -120,6 +121,7 @@
             $(this).hide();
             $('button.my_account_save').hide();
             $(this).closest('form').find('input').prop('disabled', true);
+            $(this).closest('form').find('select').prop('disabled', true);
             $('button.my_account_edit').css('display', 'flex');
         });
 
