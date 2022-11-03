@@ -35,4 +35,4 @@
 | addition to 21 slide | 30 min | Fixed show/hide pass icons for disabled inputs |
 | -- | 39:20 | -- |
 | 30 slide | 4:45 hour | Remake table for correct displaying and simple future maintainable |
-| 31 slide | 2:20 hour ||
+| 36 slide | 2:20 hour ||
