@@ -276,7 +276,7 @@
         display: block;
         font-size: 14px;
         line-height: 1;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
         color: #646464;
     }
 
@@ -304,6 +304,12 @@
 
     #shop_account_form_outer_div_ID form {
         width: 100%;
+        display: grid;
+        row-gap: 20px;
+    }
+
+    #shop_account_form_outer_div_ID form p {
+        margin-bottom: 0;
     }
 
     .shop_account_wrapper {
