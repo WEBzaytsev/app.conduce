@@ -534,3 +534,9 @@ input[type="password"]:invalid {
 .heading_setting_wrapper form .select2 {
 	margin-top: 10px;
 }
+
+@media (max-width: 767px) {
+	.tooltip_custom {
+		display: none!important;
+	}
+}
