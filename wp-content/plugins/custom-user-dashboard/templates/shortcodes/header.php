@@ -7,7 +7,7 @@
     }
 
     .site > .site-content {
-        flex-grow: 1;
+        /*flex-grow: 1;*/
     }
 
     a {

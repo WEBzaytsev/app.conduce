@@ -13,6 +13,8 @@ Version:      	0.0.8
 }
 body {
 	height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
 input[type='submit']{
@@ -255,6 +257,7 @@ gap: 0;
 	font-size:12px;
 }
 .site-footer{
+	flex-shrink: 0;
 	bottom:0;
 	width:100%;
 	background: #fff;
