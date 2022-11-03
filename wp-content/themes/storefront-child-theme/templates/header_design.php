@@ -220,7 +220,7 @@ if (!$primaryNav) {
         }
 
         .main_header .nav_menu_right {
-            margin-right: 0px;
+            margin-right: 6px;
         }
 
         .main_header .inner_wrapper_header .left_sec_header {
