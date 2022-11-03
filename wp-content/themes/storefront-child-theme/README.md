@@ -43,3 +43,5 @@
 | 36 slide | 2:20 hour ||
 | 37 slide |  | in process |
 | 38 slide | 45 min ||
+| 39 slide | 3 hour | Also added country select |
+| 40 slide | 0 | Was done in the previous task |
