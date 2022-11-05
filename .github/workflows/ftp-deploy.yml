@@ -16,9 +16,9 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
         server: ${{ secrets.ftp_server }}
-        username: webzaytsev@conduce.io
+        username: conduce
         password: ${{ secrets.ftp_password }}
-        server-dir: app.conduce.io/public_html/
+        server-dir: app.conduce.io/
         exclude: |
           **/.git*
           **/.git*/**
