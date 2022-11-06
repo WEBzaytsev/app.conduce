@@ -48,3 +48,4 @@
 | 41 slide | 45 min | Hide all tooltips for mobile devices |
 | 42 slide | 1 hour |  |
 | 43 slide | 0 | Was done before |
+| remake purchases table | 12 | stage 1. set default markup. create base JS class. add setting rows count |

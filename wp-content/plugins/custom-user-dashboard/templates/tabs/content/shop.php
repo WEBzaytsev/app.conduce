@@ -487,330 +487,203 @@
             <div class="setting_subheading">Invoices</div>
 
             <div class="">
+                <form class="table-filters">
 
-                <style>
-                    table#shopInvoices thead th {
-                        font-weight: 600;
-                        color: #2EAADC;
-                        font-size: 12px;
-                        padding: 10px;
-                        background: #fff;
-                        border-color: #D8D8D8;
-                    }
+                    <label class="table-filters__per-page" for="per-page">
+                        <span class="">Per page</span>
+                        <select name="per-page" id="per-page">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </label>
 
-                    table#shopInvoices tbody td {
-                        font-weight: 400;
-                        color: #646464;
-                        font-size: 12px;
-                        padding: 20px 10px;
-                        background: #fff;
-                        box-shadow: none;
-                        border-color: #D8D8D8;
-                    }
+                    <label for="table-search" class="table-filters__search">
+                        <input type="text" 
+                               id="table-search"
+                               name="table-search" 
+                               placeholder="Search">
+                        <img src="<?php echo UD_ASSETS_PATH . 'icons/search.png' ?>"
+                             alt="icon">
+                    </label>
 
-                    .dataTables_wrapper .dataTables_paginate .paginate_button.current,
-                    .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
-                        border: 1px solid #D8D8D8;
-                        border-radius: 5px;
-                        background: #E1D3FF;
-                        font-size: 12px;
-                    }
+                    <div class="table-filters__pagination">
+                        <span class="table-filters__pagination_btn prev">
+                            <img src="<?php echo UD_ASSETS_PATH . 'icons/prev.png'; ?>"
+                                 alt="">
+                        </span>
+                        <span class="table-filters__pagination_btn num">1</span>
+                        <span class="table-filters__pagination_btn next">
+                            <img src="<?php echo UD_ASSETS_PATH . 'icons/next.png'; ?>"
+                                 alt="">
+                        </span>
+                    </div>
+                </form>
 
-                    .dataTables_wrapper .dataTables_paginate .paginate_button.disabled,
-                    .dataTables_wrapper .dataTables_paginate .paginate_button {
-                        font-size: 12px;
-                        border-radius: 5px;
-                    }
+                <div id="shopInvoices" class="display compact purchase-table">
+                    <div class="purchase-table__row purchase-table__row-header">
+                        <div></div>
+                        <span>Date</span>
+                        <span>Order ID</span>
+                        <span>Total</span>
+                        <span>Notes</span>
+                        <span>Item</span>
+                    </div>
 
-                    .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover,
-                    .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active,
-                    .dataTables_wrapper .dataTables_paginate .paginate_button:hover,
-                    .dataTables_wrapper .dataTables_paginate .paginate_button:active,
-                    .dataTables_wrapper .dataTables_paginate .paginate_button:focus {
-                        background: #E1D3FF;
-                        border-radius: 5px;
-                        border: 1px solid #E1D3FF;
-                    }
+                    <div class="purchase-table__rows">
+                        <div class="purchase-table__row">
+                            <div class="purchase-table__row_icon">
+                                <img src="<?php echo UD_ASSETS_PATH . 'icons/checked.svg'; ?>"
+                                     alt="icon">
+                            </div>
+                            <span>25-10-2022</span>
+                            <span>564532</span>
+                            <span>$250.00</span>
+                            <span>Note message</span>
+                            <span>Standard</span>
+                        </div>
+                        <div class="purchase-table__row">
+                            <div class="purchase-table__row_icon">
+                                <img src="<?php echo UD_ASSETS_PATH . 'icons/checked.svg'; ?>"
+                                     alt="icon">
+                            </div>
+                            <span>25-10-2022</span>
+                            <span>564532</span>
+                            <span>$250.00</span>
+                            <span>Note message</span>
+                            <span>Standard</span>
+                        </div>
+                        <div class="purchase-table__row">
+                            <div class="purchase-table__row_icon">
+                                <img src="<?php echo UD_ASSETS_PATH . 'icons/checked.svg'; ?>"
+                                     alt="icon">
+                            </div>
+                            <span>25-10-2022</span>
+                            <span>564532</span>
+                            <span>$250.00</span>
+                            <span>Note message</span>
+                            <span>Standard</span>
+                        </div>
+                        <div class="purchase-table__row">
+                            <div class="purchase-table__row_icon">
+                                <img src="<?php echo UD_ASSETS_PATH . 'icons/checked.svg'; ?>"
+                                     alt="icon">
+                            </div>
+                            <span>25-10-2022</span>
+                            <span>564532</span>
+                            <span>$250.00</span>
+                            <span>Note message</span>
+                            <span>Standard</span>
+                        </div>
+                        <div class="purchase-table__row">
+                            <div class="purchase-table__row_icon">
+                                <img src="<?php echo UD_ASSETS_PATH . 'icons/checked.svg'; ?>"
+                                     alt="icon">
+                            </div>
+                            <span>25-10-2022</span>
+                            <span>564532</span>
+                            <span>$250.00</span>
+                            <span>Note message</span>
+                            <span>Standard</span>
+                        </div>
+                        <div class="purchase-table__row">
+                            <div class="purchase-table__row_icon">
+                                <img src="<?php echo UD_ASSETS_PATH . 'icons/checked.svg'; ?>"
+                                     alt="icon">
+                            </div>
+                            <span>25-10-2022</span>
+                            <span>564532</span>
+                            <span>$250.00</span>
+                            <span>Note message</span>
+                            <span>Standard</span>
+                        </div>
+                        <div class="purchase-table__row">
+                            <div class="purchase-table__row_icon">
+                                <img src="<?php echo UD_ASSETS_PATH . 'icons/checked.svg'; ?>"
+                                     alt="icon">
+                            </div>
+                            <span>25-10-2022</span>
+                            <span>564532</span>
+                            <span>$250.00</span>
+                            <span>Note message</span>
+                            <span>Standard</span>
+                        </div>
+                        <div class="purchase-table__row">
+                            <div class="purchase-table__row_icon">
+                                <img src="<?php echo UD_ASSETS_PATH . 'icons/checked.svg'; ?>"
+                                     alt="icon">
+                            </div>
+                            <span>25-10-2022</span>
+                            <span>564532</span>
+                            <span>$250.00</span>
+                            <span>Note message</span>
+                            <span>Standard</span>
+                        </div>
+                        <div class="purchase-table__row">
+                            <div class="purchase-table__row_icon">
+                                <img src="<?php echo UD_ASSETS_PATH . 'icons/checked.svg'; ?>"
+                                     alt="icon">
+                            </div>
+                            <span>25-10-2022</span>
+                            <span>564532</span>
+                            <span>$250.00</span>
+                            <span>Note message</span>
+                            <span>Standard</span>
+                        </div>
+                        <div class="purchase-table__row">
+                            <div class="purchase-table__row_icon">
+                                <img src="<?php echo UD_ASSETS_PATH . 'icons/checked.svg'; ?>"
+                                     alt="icon">
+                            </div>
+                            <span>25-10-2022</span>
+                            <span>564532</span>
+                            <span>$250.00</span>
+                            <span>Note message</span>
+                            <span>Standard</span>
+                        </div>
+                        <div class="purchase-table__row">
+                            <div class="purchase-table__row_icon">
+                                <img src="<?php echo UD_ASSETS_PATH . 'icons/checked.svg'; ?>"
+                                     alt="icon">
+                            </div>
+                            <span>25-10-2022</span>
+                            <span>564532</span>
+                            <span>$250.00</span>
+                            <span>Note message</span>
+                            <span>Standard</span>
+                        </div>
+                        <div class="purchase-table__row">
+                            <div class="purchase-table__row_icon">
+                                <img src="<?php echo UD_ASSETS_PATH . 'icons/checked.svg'; ?>"
+                                     alt="icon">
+                            </div>
+                            <span>25-10-2022</span>
+                            <span>564532</span>
+                            <span>$250.00</span>
+                            <span>Note message</span>
+                            <span>Standard</span>
+                        </div>
+                        <div class="purchase-table__row">
+                            <div class="purchase-table__row_icon">
+                                <img src="<?php echo UD_ASSETS_PATH . 'icons/checked.svg'; ?>"
+                                     alt="icon">
+                            </div>
+                            <span>25-10-2022</span>
+                            <span>564532</span>
+                            <span>$250.00</span>
+                            <span>Note message</span>
+                            <span>Standard</span>
+                        </div>
+                    </div>
 
-                    .dataTables_wrapper .dataTables_info,
-                    .dataTables_wrapper .dataTables_length {
-                        font-size: 12px;
-                    }
-
-                    #shopInvoices_filter label {
-                        font-size: 12px;
-                    }
-
-                    .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
-                        border: 1px solid #E1D3FF;
-                        font-size: 12px;
-                        color: #fff;
-                    }
-
-                    .dataTables_wrapper .dataTables_filter input {
-                        border: none;
-                        border-radius: 25px;
-                        padding: 5px;
-                        margin-left: 3px;
-                        background: #F5F5F5;
-                        box-shadow: none;
-                        font-size: 12px;
-                        height: 35px;
-                    }
-
-                    #shopInvoices_wrapper {
-                        margin-top: 20px;
-                    }
-
-                    table.dataTable {
-                        padding-top: 10px;
-                    }
-                </style>
-
-                <table id="shopInvoices" class="display compact" style="width:100%">
-                    <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Order ID</th>
-                        <th>Total</th>
-                        <th>Notes</th>
-                        <th>Item</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>25-10-2022</td>
-                        <td>564532</td>
-                        <td>$250.00</td>
-                        <td>Note message</td>
-                        <td>Standard</td>
-                    </tr>
-                    <tr>
-                        <td>25-10-2022</td>
-                        <td>564532</td>
-                        <td>$250.00</td>
-                        <td>Note message</td>
-                        <td>Power</td>
-                    </tr>
-                    <tr>
-                        <td>25-10-2022</td>
-                        <td>564532</td>
-                        <td>$250.00</td>
-                        <td>Note message</td>
-                        <td>Standard</td>
-                    </tr>
-                    <tr>
-                        <td>25-10-2022</td>
-                        <td>564532</td>
-                        <td>$250.00</td>
-                        <td>Note message</td>
-                        <td>Quick</td>
-                    </tr>
-                    <tr>
-                        <td>25-10-2022</td>
-                        <td>564532</td>
-                        <td>$250.00</td>
-                        <td>Note message</td>
-                        <td>Standard</td>
-                    </tr>
-                    <tr>
-                        <td>25-10-2022</td>
-                        <td>564532</td>
-                        <td>$250.00</td>
-                        <td>Note message</td>
-                        <td>Quick</td>
-                    </tr>
-                    <tr>
-                        <td>25-10-2022</td>
-                        <td>564532</td>
-                        <td>$250.00</td>
-                        <td>Note message</td>
-                        <td>Quick</td>
-                    </tr>
-                    <tr>
-                        <td>25-10-2022</td>
-                        <td>564532</td>
-                        <td>$250.00</td>
-                        <td>Note message</td>
-                        <td>Power</td>
-                    </tr>
-                    <tr>
-                        <td>25-10-2022</td>
-                        <td>564532</td>
-                        <td>$250.00</td>
-                        <td>Note message</td>
-                        <td>Power</td>
-                    </tr>
-                    <tr>
-                        <td>25-10-2022</td>
-                        <td>564532</td>
-                        <td>$250.00</td>
-                        <td>Note message</td>
-                        <td>Standard</td>
-                    </tr>
-                    <tr>
-                        <td>25-10-2022</td>
-                        <td>564532</td>
-                        <td>$250.00</td>
-                        <td>Note message</td>
-                        <td>Standard</td>
-                    </tr>
-                    <tr>
-                        <td>25-10-2022</td>
-                        <td>564532</td>
-                        <td>$250.00</td>
-                        <td>Note message</td>
-                        <td>Power</td>
-                    </tr>
-                    <tr>
-                        <td>25-10-2022</td>
-                        <td>564532</td>
-                        <td>$250.00</td>
-                        <td>Note message</td>
-                        <td>Standard</td>
-                    </tr>
-                    <tr>
-                        <td>25-10-2022</td>
-                        <td>564532</td>
-                        <td>$250.00</td>
-                        <td>Note message</td>
-                        <td>Quick</td>
-                    </tr>
-                    <tr>
-                        <td>25-10-2022</td>
-                        <td>564532</td>
-                        <td>$250.00</td>
-                        <td>Note message</td>
-                        <td>Power</td>
-                    </tr>
-                    <tr>
-                        <td>25-10-2022</td>
-                        <td>564532</td>
-                        <td>$250.00</td>
-                        <td>Note message</td>
-                        <td>Standard</td>
-                    </tr>
-                    <tr>
-                        <td>25-10-2022</td>
-                        <td>564532</td>
-                        <td>$250.00</td>
-                        <td>Note message</td>
-                        <td>Standard</td>
-                    </tr>
-                    <tr>
-                        <td>25-10-2022</td>
-                        <td>564532</td>
-                        <td>$250.00</td>
-                        <td>Note message</td>
-                        <td>Standard</td>
-                    </tr>
-                    <tr>
-                        <td>25-10-2022</td>
-                        <td>564532</td>
-                        <td>$250.00</td>
-                        <td>Note message</td>
-                        <td>Standard</td>
-                    </tr>
-                    <tr>
-                        <td>25-10-2022</td>
-                        <td>564532</td>
-                        <td>$250.00</td>
-                        <td>Note message</td>
-                        <td>Standard</td>
-                    </tr>
-                    <tr>
-                        <td>25-10-2022</td>
-                        <td>564532</td>
-                        <td>$250.00</td>
-                        <td>Note message</td>
-                        <td>Standard</td>
-                    </tr>
-                    <tr>
-                        <td>25-10-2022</td>
-                        <td>564532</td>
-                        <td>$250.00</td>
-                        <td>Note message</td>
-                        <td>Standard</td>
-                    </tr>
-                    <tr>
-                        <td>25-10-2022</td>
-                        <td>564532</td>
-                        <td>$250.00</td>
-                        <td>Note message</td>
-                        <td>Standard</td>
-                    </tr>
-                    <tr>
-                        <td>25-10-2022</td>
-                        <td>564532</td>
-                        <td>$250.00</td>
-                        <td>Note message</td>
-                        <td>Standard</td>
-                    </tr>
-                    <tr>
-                        <td>25-10-2022</td>
-                        <td>564532</td>
-                        <td>$250.00</td>
-                        <td>Note message</td>
-                        <td>Standard</td>
-                    </tr>
-                    <tr>
-                        <td>25-10-2022</td>
-                        <td>564532</td>
-                        <td>$250.00</td>
-                        <td>Note message</td>
-                        <td>Standard</td>
-                    </tr>
-                    <tr>
-                        <td>25-10-2022</td>
-                        <td>564532</td>
-                        <td>$250.00</td>
-                        <td>Note message</td>
-                        <td>Standard</td>
-                    </tr>
-                    <tr>
-                        <td>25-10-2022</td>
-                        <td>564532</td>
-                        <td>$250.00</td>
-                        <td>Note message</td>
-                        <td>Standard</td>
-                    </tr>
-                    <tr>
-                        <td>25-10-2022</td>
-                        <td>564532</td>
-                        <td>$250.00</td>
-                        <td>Note message</td>
-                        <td>Standard</td>
-                    </tr>
-                    <tr>
-                        <td>25-10-2022</td>
-                        <td>564532</td>
-                        <td>$250.00</td>
-                        <td>Note message</td>
-                        <td>Standard</td>
-                    </tr>
-                    <tr>
-                        <td>25-10-2022</td>
-                        <td>564532</td>
-                        <td>$250.00</td>
-                        <td>Note message</td>
-                        <td>Standard</td>
-                    </tr>
-                    <tr>
-                        <td>25-10-2022</td>
-                        <td>564532</td>
-                        <td>$250.00</td>
-                        <td>Note message</td>
-                        <td>Standard</td>
-                    </tr>
-                    <tr>
-                        <td>25-10-2022</td>
-                        <td>564532</td>
-                        <td>$250.00</td>
-                        <td>Note message</td>
-                        <td>Standard</td>
-                    </tr>
-                    </tbody>
-                </table>
+                </div>
 
             </div>
         </div>
@@ -897,5 +770,45 @@
             $(".tab_shop_content").removeClass("active");
             $(".tab_shop_content#" + $(this).attr('data-name')).addClass("active");
         });
+
+        const table = new Table($, $('#shopInvoices'));
+        table.init();
     });
+
+    function Table($, table) {
+        const _this = this;
+        this.table = table;
+
+        this.rowsWrap = this.table.find('.purchase-table__rows');
+        this.rows = this.rowsWrap.children();
+
+        this.search = $('#table-search');
+        this.rowsInPageSelect = $('#per-page');
+
+        this.settings = {
+            perPage: 5,
+            page: 0,
+            search: '',
+        }
+
+        this.setItemsOnPage = (count = 1) => {
+            const items = [..._this.rows];
+            items.length = count;
+
+            _this.rowsWrap.html(items);
+        }
+
+
+        this.init = () => {
+            if (!this.table.length) {
+                return;
+            }
+
+            _this.setItemsOnPage(this.rowsInPageSelect.val());
+
+            this.rowsInPageSelect.on('select2:select', function (e) {
+                _this.setItemsOnPage($(this).val());
+            })
+        }
+    }
 </script>
