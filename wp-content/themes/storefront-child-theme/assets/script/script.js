@@ -1,9 +1,9 @@
 (function ($) {
 
     $(document).ready(function () {
-        $('#shopInvoices').DataTable({
+        /*$('#shopInvoices').DataTable({
             dom: 'lpftrip',
-        });
+        });*/
 
         $.ajaxSetup({cache: false});
 
