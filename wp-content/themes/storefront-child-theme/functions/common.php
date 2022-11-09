@@ -10,7 +10,6 @@ function common_scripts_callback(){
     wp_enqueue_style('frontend_fontawesome','https://use.fontawesome.com/releases/v5.0.13/css/all.css');
     wp_enqueue_style( "dashicons" );
     wp_enqueue_style( 'load-fa', 'https://use.fontawesome.com/releases/v5.5.0/css/all.css' );
-
 }
 
 function signin_form_callback(){
