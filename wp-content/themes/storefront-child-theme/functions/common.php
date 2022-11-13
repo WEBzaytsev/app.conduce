@@ -399,10 +399,10 @@ if (!function_exists('storefront_delete_account_modal')) {
 
         <div class="confirmation_background">
             <div class="delete_account_confirmation">
-                <span class="close">
-                    <i class="fa-regular fa-circle-xmark"></i>
-                </span>
-                <p>This action cannot be undone. This will permanently delete your user.</p>
+<!--                <span class="close">-->
+<!--                    <i class="fa-regular fa-circle-xmark"></i>-->
+<!--                </span>-->
+                <p>Please type in your password to confirm deletion.</p>
                 <div class="email_p_relative">
                     <p class="signin_form_pTag signin_padding_extra"><span>Password</span></p>
                     <label class="delete_account_confirmation-input">
@@ -418,7 +418,8 @@ if (!function_exists('storefront_delete_account_modal')) {
                         </span>
                     </label>
                 </div>
-                <button class="delete_account_button" name="delete_user_self">Delete User</button>
+                <button class="delete_account_button"
+                        name="delete_user_self">Delete your account</button>
             </div>
         </div>
 
