@@ -1,6 +1,6 @@
 <style>
 
-    .site  {
+    .site {
         display: flex;
         flex-direction: column;
         height: 100%;
@@ -590,16 +590,6 @@
         display: none;
     }
 
-    /* .custom_my_account_main_div .menu_button_mobile:before{
-        content: "";
-        width: 15px;
-        border-top: 3px solid #646464;
-        height: 8px;
-        position: absolute;
-        border-bottom: 3px solid #646464;
-        top: -3px;
-        height:4px;
-    } */
     .content_right_myaccount_main {
         position: relative;
     }
@@ -751,9 +741,7 @@
 
     .custom_my_account_main_div .outer_wrapper_myaccount .content_left_myaccount_main .mobile_menu {
         display: none;
-        padding: 0;
-        padding-top: 6px;
-        padding-bottom: 9px;
+        padding: 6px 0 9px;
         border-top: 1px solid lightgrey;
         margin-top: 12px;
     }
@@ -806,11 +794,18 @@
 
     ul.my_account_menu .my_account_link {
         border-radius: 15px;
-        padding: 0 10px;
         transition: all 0.3s;
         background: none;
     }
 
+    ul.my_account_menu .my_account_link a {
+        display: block;
+        width: fit-content;
+        padding: 0 10px;
+        color: #040404 !important;
+    }
+
+    .my_account_link_last.active_menu_item .my_account_link,
     ul.my_account_menu .my_account_link.active_menu,
     ul.my_account_menu .my_account_link.con_active_menu {
         background: #2EAADC;
@@ -818,13 +813,14 @@
         cursor: pointer;
     }
 
+    .my_account_link_last.active_menu_item .my_account_link a,
     ul.my_account_menu .my_account_link.active_menu a,
     ul.my_account_menu .my_account_link.con_active_menu a {
         color: #fff !important;
     }
 
     ul.my_account_menu .my_account_link:not(.active_menu):hover {
-        /*background: #FFF;*/
+        background: #FFF;
     }
 
     ul.my_account_menu li.my_account_link a,
@@ -837,7 +833,6 @@
 
     ul.my_account_menu li.my_account_link:not(.active_menu):hover a {
         text-decoration: none !important;
-        color: #040404 !important;
     }
 
     .my_account_link a:hover ~ .tool_tip,
@@ -855,7 +850,6 @@
 
     .active_menu_item {
         color: #2871e3 !important;
-        text-decoration: underline !important;
     }
 
     .active_li_menu {
