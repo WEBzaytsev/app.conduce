@@ -434,14 +434,30 @@ input:checked + .slider:before {
             width:100%;
         }
 		.setting_heading_main{
-			margin-left:10px;
+            padding: 10px;
 		}
-		.setting_heading_main form{
-			padding-right:10px;
-		}
+        div.nsl-container .nsl-button-google[data-skin="light"],
+        .form_setting_wrapper {
+            width: auto;
+        }
         .my_account_controls {
             right: 10px;
             top: 120px;
+        }
+
+        #user_profile_form_outer_div_ID {
+            display: flex;
+            flex-direction: column;
+        }
+
+        div.nsl-container[data-align="left"] {
+            order: 3;
+        }
+
+        #user_profile_form_outer_div_ID .my_account_controls {
+            position: static;
+            order: 2;
+            margin-bottom: 20px;
         }
     }
 </style>
