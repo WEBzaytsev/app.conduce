@@ -276,7 +276,7 @@ gap: 0;
     cursor: pointer;
     outline: none !important;
     position: absolute;
-    top: -60px;
+	bottom: 67px;
     right: 20px;
     height: 40px;
     width: 40px;
@@ -303,7 +303,7 @@ div.nsl-container .nsl-button-default div.nsl-button-label-container{
         display:none;
     }
     #colophon #block-7 .wp-container-5 #site_up_arrow{
-        top: -50px;
+		bottom: 47px;
         right: 10px;
     }
 }

@@ -72,8 +72,10 @@
     }
 
     function afterContentUpdate(currentItem, url) {
-        scrollUp();
-        switchMenu(currentItem);
+        setTimeout(() => {
+            scrollUp();
+            switchMenu(currentItem);
+        }, 100);
 
         window.history.pushState({ path: url }, document.title, url);
     }
@@ -87,6 +89,7 @@
         if (content) {
             scrollUpButton.css('display', 'block');
             if (content.clientHeight < content.scrollHeight) {
+                console.log(111)
 
                 $(document).on('click', '#site_up_arrow', function () {
                     $(content).animate(
@@ -98,6 +101,7 @@
                     );
                 })
             } else {
+                console.log(222)
                 scrollUpButton.css('display', 'none');
             }
         }
