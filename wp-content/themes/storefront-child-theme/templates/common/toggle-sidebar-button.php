@@ -52,6 +52,13 @@ $toggle_sidebar_button_text = $args['text'];
         display: flex;
     }
 
+    .outer_wrapper_myaccount.sidebar-hide .toggle_sidebar_button_icon:hover .tool_tip {
+        top: 50%;
+        bottom: auto;
+        transform: translateY(-50%);
+        left: 110%;
+    }
+
     @media(max-width: 768px) {
         .toggle_sidebar_button_icon {
             display: none!important;
