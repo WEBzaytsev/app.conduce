@@ -505,8 +505,12 @@ input[type="password"]:invalid {
 	width: 100%;
 	position: relative;
 	z-index: 1;
+	font-size: 14px;
+	line-height: 17px;
 	background: #fff;
-	border: 1px solid transparent;
+	border: 1px solid #D8D8D8;
+	box-shadow: none;
+	border-radius: 5px;
 }
 
 .delete_account_confirmation-input input:focus {
